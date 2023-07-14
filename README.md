@@ -283,3 +283,48 @@ let's break down each of these tags:
 `<div class="button">`: This div tag is used as a container for the button and its associated icon. The class "button" can be used to style this element.
 
 `<a href="#">SHOP NOW</a>`: This is an anchor tag (a tag) which is used to create a clickable link. In this case, it's being used to create a "SHOP NOW" button. The href attribute normally specifies the URL that the link leads to. The "#" value is a placeholder and means that this link doesn't actually go anywhere at the moment.
+
+7. Now you should see this in your browser
+ <img width="1299" alt="Screenshot 2023-07-14 at 14 41 13" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/6175c8b8-b836-4114-a18d-7b157be1835a">
+
+ ### Styling our Navigation Bar And Header
+ So far we have the basic structure of our site thanks to HTML, but you must admit, its very **ugly** lets style our HTML elements using CSS 🔥
+
+ ### What is CSS
+CSS is the language we use to style a Web page.
+
+- CSS stands for Cascading Style Sheets
+- CSS describes how HTML elements are to be displayed on screen, paper, or in other media
+- CSS saves a lot of work. It can control the layout of multiple web pages all at once
+- External stylesheets are stored in CSS files
+
+### CSS Solved a Big Problem
+HTML was NEVER intended to contain tags for formatting a web page!
+
+HTML was created to describe the content of a web page, like:
+
+<h1>This is a heading</h1>
+
+<p>This is a paragraph.</p>
+
+When tags like <font>, and color attributes were added to the HTML 3.2 specification, it started a nightmare for web developers. Development of large websites, where fonts and color information were added to every single page, became a long and expensive process.
+
+To solve this problem, the World Wide Web Consortium (W3C) created CSS.
+
+CSS removed the style formatting from the HTML page!
+  
+ ### CSS Syntax
+ A CSS rule consists of a selector and a declaration block.
+<img width="612" alt="Screenshot 2023-07-14 at 14 47 32" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/27d8bf11-39d5-44f3-9b53-5ba46e8db0de">
+
+The selector points to the HTML element you want to style.
+
+The declaration block contains one or more declarations separated by semicolons.
+
+Each declaration includes a CSS property name and a value, separated by a colon.
+
+Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded by curly braces.
+
+ 
+ 
+  
