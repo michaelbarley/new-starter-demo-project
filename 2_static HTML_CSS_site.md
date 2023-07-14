@@ -873,4 +873,102 @@ Each div with the class "card" is repeated for each product, with different valu
 
 Lets break that down: 
 
+`.products{...}`: Here, all properties have been previously discussed. The CSS is styling the "products" class to occupy the full width of the page and be 140% the height of the viewport. Padding of 25px is applied to the top and bottom.
+
+`.products h1{...}`: The text-transform property changes the text to uppercase. background creates a linear gradient from left to right between two colors. -webkit-background-clip: text; and -webkit-text-fill-color: transparent; are specific to Webkit browsers (like Chrome and Safari) and make the background color show only where there is text, effectively filling the text with the gradient.
+
+`.products .box{...}`: display: grid; establishes a grid container. grid-template-columns: 1fr 1fr 1fr 1fr; creates four equal-width columns. grid-gap: 25px 0; sets the gaps between grid rows and columns. Here, it's creating a 25px gap between rows.
+
+`.products .box .card{...}`: box-shadow: 0 0 8px #6c14d0; adds a shadow to the "card" class. border-radius: 5px; rounds the corners. background: #f6f6f6; changes the background color.
+
+`.products .box .card .small_card{...}`: position: absolute; positions the "small_card" class relative to the nearest positioned ancestor. transform: translateX(-20px); moves the element horizontally. transition: 0.3s; animates changes to CSS properties over time. opacity: 0; makes the element completely transparent.
+
+`.products .box .card:hover .small_card{...}`: This applies styles when the "card" class is hovered over. transform: translateX(2px); moves the "small_card" class 2px to the right. cursor: pointer; changes the cursor to a pointer when hovering. opacity: 1; makes the "small_card" class fully opaque.
+
+`.products .box .card .image img{...}`: transition: 0.3s; adds an animation effect to the "img" class.
+
+`.products .box .card:hover .image img{...}`: This applies styles when the "card" class is hovered over. transform: scale(1.1); enlarges the image to 110% of its original size.
+
+`.products .box .card .small_card i{...}`: border: 2px solid #999999; adds a border to the "i" class elements.
+
+`.products .box .card .small_card i:hover{...}`: This applies styles when "i" class elements within the "small_card" class are hovered over. color: #c72092; changes the color of the text.
+
+`.products .box .card .products_text .btn{...}`: text-decoration: none; removes the underline from links. The padding and background properties have been previously covered. The new background color is a linear gradient, and color: white; changes the color of the text.
+
+12. Looking at this in the browser now should look like:
+<img width="1441" alt="Screenshot 2023-07-14 at 16 09 31" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/0b9b0f08-a171-4bd2-a798-4cd6185bc92b">
+
+### About Section
+13. In your index.html, outside of your closing products `</div>`. Enter:
+```html
+<div class="about" id="About">
+
+        <h1>Web<span>About</span></h1>
+
+        <div class="about_main">
+            <div class="about_image">
+                <div class="about_small_image">
+                    <img src="image/red_shoes1.png" onclick="updateMainImage(this)">
+                    <img src="image/red_shoes2.png" onclick="updateMainImage(this)">
+                    <img src="image/red_shoes3.png" onclick="updateMainImage(this)">
+                    <img src="image/red_shoes4.png" onclick="updateMainImage(this)">
+                </div>
+
+                <div class="image_contaner">
+                    <img src="image/red_shoes1.png" id="imagebox">
+                </div>
+
+            </div>
+
+            <div class="about_text">
+                <p>
+                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                    classical
+                    Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                    Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from
+                    a
+                    Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the
+                    undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et
+                    Malorum"
+                    (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory
+                    of ethics,
+                    very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..",
+                    comes
+                    from a line in section 1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is reproduced
+                    below
+                    for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero
+                    are also
+                    reproduced in their exact original form, accompanied by English versions from the 1914 translation
+                    by H. Rackham.
+                </p>
+            </div>
+
+        </div>
+
+        <a href="#" class="about_btn">Shop Now</a>
+
+        <script>
+            function updateMainImage(small) {
+                var full = document.getElementById("imagebox")
+                full.src = small.src
+            }
+        </script>
+
+    </div>
+```
+
+Let's break this down: 
+
+
+`<h1>Web<span>About</span></h1>`: This line uses a `<span>` element within the `<h1>` element. The `<span>` tag is used for grouping inline-elements in a document and can be used to apply styles to the contained text or to perform certain tasks with JavaScript.
+    
+`<div class="about_image"> and <div class="image_contaner">`: These are new divisions used to organize images.
+    
+`<img src="image/red_shoes1.png" onclick="updateMainImage(this)">`: This is an img element similar to ones seen before, but it now has an onclick attribute. This attribute specifies a JavaScript function (updateMainImage(this)) to be executed when the element is clicked.
+    
+`function updateMainImage(small) { var full = document.getElementById("imagebox") full.src = small.src }`: This is an inline JavaScript function. When a smaller image is clicked, this function changes the source of the main image to match that of the clicked image.
+
+`<div class="about_text">`: This division contains text about the product. Inside it, the <p> element encloses a block of text.
+
+`<a href="#" class="about_btn">Shop Now</a>`: This is a link element with the class "about_btn". When clicked, it might lead the user to a shopping page. The actual link is not specified here (denoted by the "#").
 
