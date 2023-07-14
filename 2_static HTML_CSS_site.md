@@ -234,7 +234,7 @@ Multiple CSS declarations are separated with semicolons, and declaration blocks 
 ### CSS Selectors
 selectors in CSS are used to target HTML elements and apply styles to them. There are many types of selectors in CSS, each with a specific way of selecting elements. Here are some of the most commonly used ones:
 
-**Type selector**: This is the most basic selector. It matches the name of an HTML element. For example, h1 { color: red; } selects all <h1> elements and sets their text color to red.
+**Type selector**: This is the most basic selector. It matches the name of an HTML element. For example, h1 { color: red; } selects all `<h1>` elements and sets their text color to red.
 
 **Class selector**: This targets elements that have a specific class attribute. It's denoted by a dot (.) followed by the class name. For example, .my-class { color: blue; } selects elements with class="my-class" and sets their text color to blue.
 
