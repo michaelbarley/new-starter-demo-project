@@ -1107,3 +1107,6 @@ Let's break that down:
 `transition: 0.5s;`: The transition property is a shorthand property for transition-property, transition-duration, transition-timing-function, and transition-delay. Here, it's set to last 0.5 seconds, and it applies to all changeable properties.
 
 `The :hover pseudo-class`: This is a CSS pseudo-class that matches when the user interacts with an element with a pointing device, but does not necessarily activate it. It is generally used to control color changes, underlines, backgrounds, and cursors, in response to the user hovering over an element.
+
+15. Looking at the result in the browser, it should look like:
+<img width="1666" alt="Screenshot 2023-07-14 at 16 24 57" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/47462488-d6f7-461c-9a51-93b0065de8fd">
