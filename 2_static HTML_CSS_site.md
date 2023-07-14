@@ -972,3 +972,138 @@ Let's break this down:
 
 `<a href="#" class="about_btn">Shop Now</a>`: This is a link element with the class "about_btn". When clicked, it might lead the user to a shopping page. The actual link is not specified here (denoted by the "#").
 
+### Styling The About Section
+14. Now lets style the section, in `style.css` underneath our existing code enter:
+```css
+.about{
+    width: 100%;
+    height: 100vh;
+    padding: 35px 0;
+}
+
+.about h1{
+    font-size: 60px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+}
+
+.about h1 span{
+    background: linear-gradient(to right, #c72092 , #6c14d0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 15px;
+}
+
+.about .about_main{
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about .about_main .about_image{
+    display: flex;
+    margin-top: 50px;
+}
+
+.about .about_main .about_image .about_small_image{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 15px;
+}
+
+.about .about_main .about_image .about_small_image img{
+    height: 92px;
+    margin: 5px 0;
+    cursor: pointer;
+    background: linear-gradient(to right, #6c14d0 , #c72092);
+    display: block;
+    border-radius: 6px;
+    padding: 5px 5px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.6);
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.about .about_main .about_image .about_small_image img:hover{
+    opacity: 1;
+}
+
+.about .about_main .image_contaner{
+    padding: 10px;
+    display: flex;
+}
+
+.about .about_main .image_contaner img{
+    border: 3px solid #6c14d0;
+    border-radius: 20px;
+    height: 430px;
+    padding: 30px;
+    box-shadow: 0 0 8px #6c14d0;
+}
+
+.about .about_main .about_text{
+    margin-top: 45px;
+}
+
+.about .about_main .about_text p{
+    background: linear-gradient(to left, #c72092 , #6c14d0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 22px;
+    width: 600px;
+    text-align: justify;
+    padding: 25px 30px;
+    border: 2px solid #c72092;
+    border-radius: 20px;
+    box-shadow: 0 0 8px #c72092;
+}
+
+.about .about_btn{
+    color: black;
+    background: none;
+    position: relative;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    padding: 10px 25px;
+    border: 2px solid #c72092;
+    text-decoration: none;
+    box-shadow: 0 0 8px #c72092;
+    transition: 0.5s;
+}
+
+.about .about_btn:hover{
+    border: 2px solid transparent;
+    background: #c72092;
+    color: white;
+}
+```
+
+Let's break that down:
+
+`position: relative;`: This property positions an element relative to its normal position. Other elements will not adjust to fit into space when it is moved. When combined with top, left, right, bottom, it allows the element to be moved in the respective direction.
+
+`transform: translate(-50%,-50%);`: The transform property modifies the coordinate space of an element using the translate function. In this case, the element is moved left by 50% of its width and up by 50% of its height. This is often used to center an element.
+
+`justify-content: space-around;`: This is a flexible box layout specific property (works when display is set to flex). It defines how space is distributed between and around items along the main axis (in this case, horizontally). space-around means items have a half-size space on both ends, and a full-size space between them.
+
+`background: linear-gradient(to left, #c72092 , #6c14d0);`: This sets a linear gradient background image. The direction of the gradient is to left, which means the gradient starts from the right.
+
+`text-align: justify;`: This property sets the text alignment to justify. The text is spread to align with both the left and right margins.
+
+`box-shadow: 0 0 8px #c72092;`: The box-shadow property applies a shadow to an element. The first and second values specify the horizontal and vertical offsets, the third is the blur radius, and the last value specifies the color of the shadow.
+
+`transition: 0.5s;`: The transition property is a shorthand property for transition-property, transition-duration, transition-timing-function, and transition-delay. Here, it's set to last 0.5 seconds, and it applies to all changeable properties.
+
+`The :hover pseudo-class`: This is a CSS pseudo-class that matches when the user interacts with an element with a pointing device, but does not necessarily activate it. It is generally used to control color changes, underlines, backgrounds, and cursors, in response to the user hovering over an element.
