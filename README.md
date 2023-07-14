@@ -260,7 +260,6 @@ Within the same `<section>` tag as your nag but underneath it place this:
             </div>
             <div class="button">
                 <a href="#">SHOP NOW</a>
-                <i class="fa-solid fa-chevron-right"></i>
             </div>
         </div>
 ```
