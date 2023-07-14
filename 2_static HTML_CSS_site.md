@@ -528,3 +528,349 @@ The `:hover pseudo-class` is used to apply styles when the mouse hovers over an 
 
 The transition property adds an animation to an element when its properties change. It can make changes appear more smooth and gradual.
 Lastly, the `transform: translateX(6px);` rule moves the element 6px to the right along the X-axis.
+
+9. Lets look in the browser, and BOOM! look at that beauty 🔥 😍
+<img width="1446" alt="Screenshot 2023-07-14 at 15 48 56" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/75e11efc-1860-4609-9a55-acefae79dd4e">
+
+### Products Section
+This next section contains ALOT of duplication, in upcoming sections we will solve this dont worry! 
+
+10. In your index.html, outside of your closing `</section>` for the nav+header. Enter: 
+```html
+    <div class="products" id="Products">
+        <h1>Products</h1>
+
+        <div class="box">
+            <div class="card">
+                <div class="image">
+                    <img src="image/shoes1.png">
+                </div>
+
+                <div class="products_text">
+                    <h2>NIKE</h2>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    </p>
+                    <h3>$100.99</h3>
+                    <div class="products_star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <a href="#" class="btn">Add To Cart</a>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="image">
+                    <img src="image/shoes2.png">
+                </div>
+
+                <div class="products_text">
+                    <h2>NIKE</h2>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    </p>
+                    <h3>$200.99</h3>
+                    <div class="products_star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="#" class="btn">Add To Cart</a>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="image">
+                    <img src="image/shoes3.png">
+                </div>
+
+                <div class="products_text">
+                    <h2>NIKE</h2>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    </p>
+                    <h3>$175.99</h3>
+                    <div class="products_star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <a href="#" class="btn">Add To Cart</a>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="image">
+                    <img src="image/shoes4.png">
+                </div>
+
+                <div class="products_text">
+                    <h2>NIKE</h2>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    </p>
+                    <h3>$120.99</h3>
+                    <div class="products_star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <a href="#" class="btn">Add To Cart</a>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="image">
+                    <img src="image/shoes5.png">
+                </div>
+
+                <div class="products_text">
+                    <h2>NIKE</h2>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    </p>
+                    <h3>$150.99</h3>
+                    <div class="products_star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <a href="#" class="btn">Add To Cart</a>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="image">
+                    <img src="image/shoes6.png">
+                </div>
+
+                <div class="products_text">
+                    <h2>NIKE</h2>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    </p>
+                    <h3>$220.99</h3>
+                    <div class="products_star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                    </div>
+                    <a href="#" class="btn">Add To Cart</a>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="image">
+                    <img src="image/shoes.png">
+                </div>
+
+                <div class="products_text">
+                    <h2>NIKE</h2>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    </p>
+                    <h3>$110.99</h3>
+                    <div class="products_star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <a href="#" class="btn">Add To Cart</a>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="image">
+                    <img src="image/shoes7.png">
+                </div>
+
+                <div class="products_text">
+                    <h2>NIKE</h2>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    </p>
+                    <h3>$150.99</h3>
+                    <div class="products_star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                    </div>
+                    <a href="#" class="btn">Add To Cart</a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+```
+
+Let's break this down: 
+
+`<div class="products" id="Products">`: This is a div element as we've discussed before, with both class and id attributes. The id attribute is a unique identifier, and it's used here as "Products".
+
+`<h1>Products</h1>`: An h1 element, which we've seen before. It's used here to provide a heading for the page or section.
+
+`<div class="box">`: Another div element with a class attribute. This class of "box" could be styled using CSS to create a container around related content.
+
+`<div class="card">`: This div uses a new class, "card", often used in web design to denote a container for a grouping of related items - in this case, the individual products.
+
+`<div class="image"><img src="image/shoes1.png"></div>`: This is an img tag nested within a div. This structure is commonly used to apply specific styles to the image, such as borders or background colors, that are independent of the image file itself. The img tag's src attribute is set to the path of the image file.
+
+`<div class="products_text">`: This div has a new class, "products_text", which could be used to apply styles to the product's text information.
+
+`<div class="products_star">`: Another new class, "products_star", is applied to this div. This could be used in CSS to style the star rating for each product.
+
+`<a href="#" class="btn">Add To Cart</a>`: This is an a (anchor) element we've seen before. It's used here with a new class, "btn", which could be used in CSS to style the element like a button. When clicked, this button-like link could trigger a JavaScript function to add the product to the cart.
+
+Each div with the class "card" is repeated for each product, with different values for the img source, product name, description, price, and rating. This type of repeated structure is often used in web design for items in a list or grid, like products in an online store.
+
+### Styling The Products Section
+11. Now lets style the section, in `style.css` underneath our existing code enter:
+```css
+.products{
+    width: 100%;
+    height: 140vh;
+    padding: 25px 0;
+}
+
+.products h1{
+    margin: 35px 0;
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #c72092,#6c14d0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;    
+}
+
+.products .box{
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 25px 0;
+}
+
+.products .box .card{
+    width: 290px;
+    height: 440px;
+    box-shadow: 0 0 8px #6c14d0;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px 20px;
+    background: #f6f6f6;
+}
+
+.products .box .card .small_card{
+    display: flex;
+    flex-flow: column;
+    position: absolute;
+    margin: 10px 0;
+    transform: translateX(-20px);
+    transition: 0.3s;
+    opacity: 0;
+}
+
+.products .box .card:hover .small_card{
+    transform: translateX(2px);
+    cursor: pointer;
+    opacity: 1;
+}
+
+.products .box .card .image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.products .box .card .image img{
+    width: 150px;
+    margin: 15px 0;
+    transition: 0.3s;
+}
+
+.products .box .card:hover .image img{
+    transform: scale(1.1);
+}
+
+.products .box .card .small_card i{
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+    font-size: 18px;
+    margin: 2px 0;
+    line-height: 40px;
+    border: 2px solid #999999;
+    transition: 0.2s;
+}
+
+.products .box .card .small_card i:hover{
+    color: #c72092;
+}
+
+.products .box .card .products_text h2{
+    font-size: 30px;
+    margin-top: 15px;
+}
+
+.products .box .card .products_text p{
+    color: #91919191;
+    line-height: 21px;
+    margin: 8px 0;
+}
+
+.products .box .card .products_text h3{
+    margin: 7px 0;
+}
+
+.products .box .card .products_text .products_star{
+    color: orange;
+    margin-bottom: 19px;
+    cursor: pointer;
+}
+
+.products .box .card .products_text .btn{
+    text-decoration: none;
+    padding: 10px 20px;
+    background: linear-gradient(to right, #c72092 , #6c14d0);
+    color: white;
+}
+```
+
+Lets break that down: 
+
+
