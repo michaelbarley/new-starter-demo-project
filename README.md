@@ -240,5 +240,47 @@ Note that the `<nav>` tag is not required for all lists of links, but is useful 
 6. Now you should see this in your browser
   <img width="476" alt="Screenshot 2023-07-14 at 14 27 36" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/69580b80-5c02-417b-9d56-f0c8e4d247f8">
  
+### Header
+Within the same `<section>` tag as your nag but underneath it place this:
+```html
+        <div class="main" id="Home">
+            <div class="main_content">
+                <div class="main_text">
+                    <h1>NIKE<br><span>Collection</span></h1>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has 
+                        been the industry's standard dummy text ever since the 1500s, when an unknown printer took 
+                        a galley of type and scrambled it to make a type specimen book. It has survived not only 
+                        five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                    </p>
+                </div>
+                <div class="main_image">
+                    <img src="image/shoes.png">
+                </div>
+            </div>
+            <div class="button">
+                <a href="#">SHOP NOW</a>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+        </div>
+```
 
+let's break down each of these tags:
 
+`<div class="main" id="Home">`: This is a div tag, which we've previously discussed. It's being assigned two attributes: a class and an id. The class, "main", can be used to apply styling to this element and any other elements with the same class. The id, "Home", is unique to this element and can be used to target this specific element for CSS or JavaScript. The id also allows this section of the webpage to be directly linked to with a URL that ends in #Home.
+
+`<div class="main_content">`: This div tag is used as a container for grouping together the textual content and the image of the main section. The class "main_content" can be used to style this container.
+
+`<div class="main_text">`: This div tag contains the heading and paragraph for the main section. The class "main_text" can be used to apply styling to this content.
+
+`<h1>NIKE<br><span>Collection</span></h1>`: Here, an h1 tag is used to define the most important heading in the main section. Inside this h1 tag, there is a br tag used to create a line break, and a span tag to distinguish the word "Collection" for unique styling.
+
+`<p>`: The p tag is used to hold the paragraph text for this section.
+
+`<div class="main_image">`: This div tag is used to contain the image for the main section. The class "main_image" can be used to style this container.
+
+`<img src="image/shoes.png">`: The img tag is used to embed an image into the webpage. The src attribute specifies the path to the image file. In this case, the image file is named "shoes.png" and it is located in an "image" folder in the same directory as the HTML file.
+
+`<div class="button">`: This div tag is used as a container for the button and its associated icon. The class "button" can be used to style this element.
+
+`<a href="#">SHOP NOW</a>`: This is an anchor tag (a tag) which is used to create a clickable link. In this case, it's being used to create a "SHOP NOW" button. The href attribute normally specifies the URL that the link leads to. The "#" value is a placeholder and means that this link doesn't actually go anywhere at the moment.
