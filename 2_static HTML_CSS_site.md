@@ -1,5 +1,5 @@
 # Static HTML/CSS site
-By the end of this section you will have a fully functionl ecommerce landing page written in HTML & CSS! Lets do this 🚀
+By the end of this section you will have a fully functional ecommerce landing page written in HTML & CSS! Lets do this 🚀
 
 ## 1. Folder Setup 
 1. Open Finder (located usually on your dock)
