@@ -1110,3 +1110,328 @@ Let's break that down:
 
 15. Looking at the result in the browser, it should look like:
 <img width="1666" alt="Screenshot 2023-07-14 at 16 24 57" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/47462488-d6f7-461c-9a51-93b0065de8fd">
+
+
+### Review Section
+This section also involes some duplication, but dont worry! 
+
+16. In your index.html, outside of your closing about </div>. Enter:
+```html
+    <div class="review" id="Review">
+        <h1>Customer's<span>review</span></h1>
+        
+        <div class="review_box">
+            <div class="review_card">
+                <div class="card_top">
+                    <div class="profile">
+
+                        <div class="profile_image">
+                            <img src="image/girl_dp1.jpg">
+                        </div>
+
+                        <div class="name">
+                            <strong>Ranidi Lochana</strong>
+
+                            <div class="like">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="comment">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, amet nesciunt voluptatem cum 
+                        architecto ipsum vero nulla voluptatibus dolorum modi assumenda eum? Aliquid inventore velit ipsa 
+                        repellat numquam atque dolores!
+                    </p>
+                </div>
+            </div>   
+
+            <div class="review_card">
+                <div class="card_top">
+                    <div class="profile">
+
+                        <div class="profile_image">
+                            <img src="image/man_dp1.jpg">
+                        </div>
+
+                        <div class="name">
+                            <strong>Sayuru Tharanga</strong>
+
+                            <div class="like">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="comment">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, amet nesciunt voluptatem cum 
+                        architecto ipsum vero nulla voluptatibus dolorum modi assumenda eum? Aliquid inventore velit ipsa 
+                        repellat numquam atque dolores!
+                    </p>
+                </div>
+            </div>   
+
+            <div class="review_card">
+                <div class="card_top">
+                    <div class="profile">
+
+                        <div class="profile_image">
+                            <img src="image/man_dp2.jpg">
+                        </div>
+
+                        <div class="name">
+                            <strong>Senuda Dilwan</strong>
+
+                            <div class="like">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="comment">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, amet nesciunt voluptatem cum 
+                        architecto ipsum vero nulla voluptatibus dolorum modi assumenda eum? Aliquid inventore velit ipsa 
+                        repellat numquam atque dolores!
+                    </p>
+                </div>
+            </div>   
+
+        </div>
+
+        <div class="review_box">
+            <div class="review_card">
+                <div class="card_top">
+                    <div class="profile">
+
+                        <div class="profile_image">
+                            <img src="image/gir_dp3.jpg">
+                        </div>
+
+                        <div class="name">
+                            <strong>Kaveesha Vidurangi</strong>
+
+                            <div class="like">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="comment">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, amet nesciunt voluptatem cum 
+                        architecto ipsum vero nulla voluptatibus dolorum modi assumenda eum? Aliquid inventore velit ipsa 
+                        repellat numquam atque dolores!
+                    </p>
+                </div>
+            </div>   
+
+            <div class="review_card">
+                <div class="card_top">
+                    <div class="profile">
+
+                        <div class="profile_image">
+                            <img src="image/gir_dp2.jpg">
+                        </div>
+
+                        <div class="name">
+                            <strong>John Deo</strong>
+
+                            <div class="like">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="comment">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, amet nesciunt voluptatem cum 
+                        architecto ipsum vero nulla voluptatibus dolorum modi assumenda eum? Aliquid inventore velit ipsa 
+                        repellat numquam atque dolores!
+                    </p>
+                </div>
+            </div>   
+
+            <div class="review_card">
+                <div class="card_top">
+                    <div class="profile">
+
+                        <div class="profile_image">
+                            <img src="image/man_dp3.jpg">
+                        </div>
+
+                        <div class="name">
+                            <strong>Charith Aruna</strong>
+
+                            <div class="like">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="comment">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis, amet nesciunt voluptatem cum 
+                        architecto ipsum vero nulla voluptatibus dolorum modi assumenda eum? Aliquid inventore velit ipsa 
+                        repellat numquam atque dolores!
+                    </p>
+                </div>
+            </div>   
+
+        </div>
+
+    </div>
+```
+
+Let's break this down: 
+
+`<strong>Ranidi Lochana</strong>`: The <strong> HTML element indicates that its contents have strong importance, seriousness, or urgency. Browsers typically render the contents in bold type.
+
+### Styling the Reviews Section
+17. Now lets style the section, in `style.css` underneath our existing code enter:
+```css
+.review{
+    width: 100%;
+    height: 100vh;
+    padding-top: 80px;
+}
+
+.review h1{
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.review h1 span{
+    background: linear-gradient(to left, #c72092 , #6c14d0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 15px;    
+}
+
+.review .review_box{
+    width: 95%;
+    position: relative;
+    top: 7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.review .profile .profile_image{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 5px 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.review .profile .profile_image:hover{
+    transform: scale(1.2);
+}
+
+.review .profile_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.review .profile{
+    display: flex;
+    align-items: center;
+}
+
+.review .review_box .review_card{
+    width: 500px;
+    background: #f3f1f1;
+    padding: 20px 25px;
+    border-radius: 5px;
+    margin: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.review .review_box .review_card .card_top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.review .review_box .review_card .card_top .profile .name{
+    margin-left: 20px;
+    line-height: 22px;
+}
+
+.review .review_box .review_card .card_top .profile .name strong{
+    font-size: 20px;
+}
+
+.review .review_box .review_card .card_top .profile .name .like i{
+    color: orange;
+    display: inline-block;
+    font-size: 12px;
+}
+
+.review .review_box .review_card .comment p{
+    text-align: justify;
+    line-height: 22px;
+    margin-top: 15px;
+}
+```
+
+Let's break this down: 
+
+`height: 100vh;`: Here, vh stands for viewport height. It's a relative unit that means "1% of the height of the viewport". So height: 100vh; will make the element take up the entire height of the viewport.
+
+linear-gradient(to left, #c72092 , #6c14d0);: The linear-gradient() function creates an image consisting of a progressive transition between two or more colors along a straight line. Its result is an object of the `<image>` data type, which can be used as a value of the background-image property. In this case, the gradient is going from right to left (specified by to left) starting from color #c72092 and ending with color #6c14d0.
+
+`-webkit-background-clip: text;`: The -webkit-background-clip CSS property determines whether an element's background, either the color or image, extends underneath its border. Here, it's being used with the value text, which will cause the background to clip to the foreground text. Note that this is a non-standard feature and it's not fully supported in all browsers.
+
+`-webkit-text-fill-color: transparent;`: The -webkit-text-fill-color CSS property specifies the fill color of characters of text. In this case, it's used to make the text transparent, which lets the background-clip effect show through.
+
+`object-fit: cover;`: The object-fit CSS property sets how the content of a replaced element, such as an <img> or <video>, should be resized to fit its container. cover scales the image to fill the element's content box, while preserving its aspect ratio.
+
+`object-position: center;`: The object-position property determines the position of the replaced content within the content box, when the content does not completely fill the content box.
+
+`transform: scale(1.2);`: The transform CSS property lets you rotate, scale, skew, or translate an element. Here, it's used with scale(1.2), which means the image will grow to 120% of its original size when hovered over.
+
+`transition: 0.3s;`: The transition property is a shorthand property for transition-property, transition-duration, transition-timing-function, and transition-delay. It allows elements to change values over a specified duration. Here it's set to 0.3s, meaning that any change will transition smoothly over a 300 millisecond period.
