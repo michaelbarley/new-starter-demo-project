@@ -231,6 +231,31 @@ Each declaration includes a CSS property name and a value, separated by a colon.
 
 Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded by curly braces.
 
+### CSS Selectors
+selectors in CSS are used to target HTML elements and apply styles to them. There are many types of selectors in CSS, each with a specific way of selecting elements. Here are some of the most commonly used ones:
+
+**Type selector**: This is the most basic selector. It matches the name of an HTML element. For example, h1 { color: red; } selects all <h1> elements and sets their text color to red.
+
+**Class selector**: This targets elements that have a specific class attribute. It's denoted by a dot (.) followed by the class name. For example, .my-class { color: blue; } selects elements with class="my-class" and sets their text color to blue.
+
+**ID selector**: This targets an element with a specific id attribute. It's denoted by a hash (#) followed by the id name. For example, #my-id { color: green; } selects the element with id="my-id" and sets its text color to green. Remember, IDs should be unique within a page.
+
+**Attribute selector**: This targets elements based on their attributes and attribute values. For example, input[type="text"] { color: purple; } selects `<input>` elements with a type attribute of "text" and sets their text color to purple.
+
+**Pseudo-class selector**: This targets elements in a specific state, like hovered over or focused. For example, a:hover { color: orange; } changes the text color to orange when a link is hovered over with the cursor.
+
+**Pseudo-element selector**: This targets a specific part of an element, like the first letter or line. For example, p::first-letter { font-size: 2em; } makes the first letter of every paragraph twice as big as the rest of the text.
+
+**Descendant combinator**: This targets an element that's a descendant of another element (i.e., nested within it, directly or indirectly). For example, div p { color: yellow; } selects all `<p>` elements that are inside a `<div>`.
+
+**Child combinator**: This targets an element that's a direct child of another element. It's denoted by a > between two selectors. For example, ul > li { color: teal; } selects all `<li>` elements that are direct children of a `<ul>`.
+
+**Adjacent sibling combinator**: This targets an element that's directly after another element at the same level. It's denoted by a + between two selectors. For example, h1 + p { color: brown; } selects the first `<p>` that directly follows an `<h1>`.
+
+**General sibling combinator**: This targets all elements that follow another element at the same level. It's denoted by a ~ between two selectors. For example, h1 ~ p { color: pink; } selects all `<p>` elements that follow an `<h1>` at the same level.
+
+Using these selectors and combinators, you can target pretty much any element on a page in many different ways. Understanding how to use them effectively is a key part of mastering CSS.
+
 ### The CSS Box Model
 In CSS, the term "box model" is used when talking about design and layout.
 
