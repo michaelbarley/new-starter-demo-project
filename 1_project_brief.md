@@ -69,3 +69,6 @@ WHEN I am styling the webpage, I WANT to use CSS effectively, SO THAT the webpag
 
 **Testing Work-item**:
 WHEN I am testing the webpage, I WANT to ensure it displays correctly in different browsers, SO THAT all users have a consistent viewing experience.
+
+# Ready for the next section? 
+[lets go!](https://github.com/michaelbarley/new-starter-demo-project/blob/main/2_static%20HTML_CSS_site.md)
