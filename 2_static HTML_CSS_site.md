@@ -1422,7 +1422,7 @@ Let's break this down:
 
 `height: 100vh;`: Here, vh stands for viewport height. It's a relative unit that means "1% of the height of the viewport". So height: 100vh; will make the element take up the entire height of the viewport.
 
-linear-gradient(to left, #c72092 , #6c14d0);: The linear-gradient() function creates an image consisting of a progressive transition between two or more colors along a straight line. Its result is an object of the `<image>` data type, which can be used as a value of the background-image property. In this case, the gradient is going from right to left (specified by to left) starting from color #c72092 and ending with color #6c14d0.
+`linear-gradient(to left, #c72092 , #6c14d0);`: The linear-gradient() function creates an image consisting of a progressive transition between two or more colors along a straight line. Its result is an object of the `<image>` data type, which can be used as a value of the background-image property. In this case, the gradient is going from right to left (specified by to left) starting from color #c72092 and ending with color #6c14d0.
 
 `-webkit-background-clip: text;`: The -webkit-background-clip CSS property determines whether an element's background, either the color or image, extends underneath its border. Here, it's being used with the value text, which will cause the background to clip to the foreground text. Note that this is a non-standard feature and it's not fully supported in all browsers.
 
@@ -1913,6 +1913,5 @@ This introcues no new concepts 🙌🏻
 
 # Congratulations 🎉🎉🎉🎉🎉
 Congratulations! Your hard work, dedication, and determination have truly paid off. Building a website from scratch is no easy feat, especially when diving deep into the intricacies of HTML and CSS. However, you've not only built a beautifully designed store landing page, but also acquired a deep understanding of each and every concept used to bring this project to life. This accomplishment is a testament to your passion for web development and your commitment to learning. Remember, each line of code you wrote is a step forward on your journey. May this success lead to a greater achievement in the years to come. Keep coding, keep learning, and keep pushing the boundaries of what's possible. Well done!
-
-
+![image](https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/b4b45ae0-2251-485e-b173-59fa912023ef)
 
