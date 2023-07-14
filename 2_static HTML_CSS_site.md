@@ -326,6 +326,8 @@ Apart from these basic properties, there are also some units that you should be 
 
 `calc()`: This function allows you to perform calculations to determine CSS property values.
 
+
+
 ## 3. style.css
 Now lets create our first CSS file. Within our editor right click and make a `new file` and name it style.css. In our `index.html` in our `<head>` we are already including our CSS file with this line
 
@@ -1913,5 +1915,7 @@ This introcues no new concepts 🙌🏻
 
 # Congratulations 🎉🎉🎉🎉🎉
 Congratulations! Your hard work, dedication, and determination have truly paid off. Building a website from scratch is no easy feat, especially when diving deep into the intricacies of HTML and CSS. However, you've not only built a beautifully designed store landing page, but also acquired a deep understanding of each and every concept used to bring this project to life. This accomplishment is a testament to your passion for web development and your commitment to learning. Remember, each line of code you wrote is a step forward on your journey. May this success lead to a greater achievement in the years to come. Keep coding, keep learning, and keep pushing the boundaries of what's possible. Well done!
+
+
 ![image](https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/b4b45ae0-2251-485e-b173-59fa912023ef)
 
