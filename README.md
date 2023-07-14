@@ -237,4 +237,8 @@ let's break down each of these tags:
 
 Note that the `<nav>` tag is not required for all lists of links, but is useful for identifying blocks of major navigation links, and can be particularly helpful in accessibility as it allows screen readers to understand the context of the links.
 
+6. Now you should see this in your browser
+  <img width="476" alt="Screenshot 2023-07-14 at 14 27 36" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/69580b80-5c02-417b-9d56-f0c8e4d247f8">
+ 
+
 
