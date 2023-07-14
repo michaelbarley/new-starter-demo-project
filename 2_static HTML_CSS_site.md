@@ -1531,3 +1531,211 @@ No new topics have been introduced here!
 
 21. Looking in the browser, it should now look like:
 <img width="1764" alt="Screenshot 2023-07-14 at 16 46 22" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/1035073b-48af-40d6-bd6f-b3c5c702b4c6">
+
+### Login From Section
+22. In your index.html, outside of your closing services </div>. Enter:
+
+```html
+    <div class="login_form">
+        <div class="left">
+            <img src="image/logshoes.png">
+        </div>
+
+        <div class="right">
+            <h1>Welcome Back!</h1>
+
+            <form action="#" method="post">
+                <p>User Name</p>
+                <div class="user">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" name="user" placeholder="User Name" class="username">
+                </div>
+
+                <p class="passworg_tag">Password</p>
+                <div class="password">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="text" name="password" placeholder="Password">
+                </div>
+
+                <p class="forget">Forget Password ?</p>
+
+                <button type="submit">Login</button>
+                <div class="loging_icon">
+                    <a href="#"><img src="image/google.png"></a>
+                    <a href="#"><img src="image/facebook.png"></a>
+                    <a href="#"><img src="image/twitter.png"></a>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+```
+
+Let's break down the new concepts:
+
+`<form action="#" method="post">`: The action attribute specifies where to send the form data when the form is submitted. In this case, action="#" is a placeholder and would typically be replaced with the URL of a server-side script (such as a PHP page) to process the form data. The method attribute specifies the HTTP method (get or post) to use when sending the form data. post is used when the form data should be sent within the body of the HTTP request, which is more secure as the data does not show up in the URL.
+    
+`<button>`: The HTML `<button>` element represents a clickable button.
+
+### Styling The Login Form Section
+23. Now lets style the section, in `style.css` underneath our existing code enter:
+```css
+.login_form{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url(image/loging_bg.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.login_form .left img{
+    width: 650px;
+}
+
+.login_form .right{
+    position: relative;
+    top: -50px;
+    left: -60px;
+    padding: 50px 80px;
+}
+
+.login_form .right h1{
+    font-family: prevattscriptssk;
+    font-size: 45px;
+    margin-bottom: 40px;
+}
+
+.login_form .right p{
+    margin-bottom: 5px;
+}
+
+.login_form .right .user{
+    border: 2px solid #6c14d0;
+    border-radius: 5px;
+    width: 350px;
+    height: 40px;
+    display: flex;
+}
+
+.login_form .right .user i{
+    position: relative;
+    top: 9px;
+    left: 15px;
+    color: #c72092;
+}
+
+.login_form .right .user .username{
+    position: relative;
+    left: 9%;
+    width: 295px;
+    background: none;
+    outline: none;
+    border: none;
+    display: flex;
+    font-size: 15px;
+}
+
+.login_form .right .passworg_tag{
+    margin: 15px 0 5px 0;
+}
+
+.login_form .right .password{
+    border: 2px solid #6c14d0;
+    border-radius: 5px;
+    width: 350px;
+    height: 40px;
+    display: flex;
+}
+
+.login_form .right .password i{
+    position: relative;
+    top: 9px;
+    left: 15px;
+    color: #c72092;
+}
+
+.login_form .right .password input{
+    position: relative;
+    left: 9%;
+    width: 295px;
+    background: none;
+    border: none;
+    outline: none;
+    display: flex;
+    font-size: 15px;
+}
+
+::-webkit-input-placeholder{
+    color: black;
+    opacity: 0.7;
+}
+
+.login_form .right .forget{
+    position: relative;
+    left: 60%;
+    margin: 6px 0 10px 0;
+    cursor: pointer;
+}
+
+.login_form .right button{
+    width: 350px;
+    color: white;
+    padding: 7px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    background: linear-gradient(to right, #c72092 , #6c14d0);
+}
+
+.login_form .right .loging_icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.login_form .right .loging_icon a{
+    width: 30px;
+    height: 30px;
+    margin: 0 2px;
+    border-radius: 50%;
+    background: #f3f3f3;
+    box-shadow: 0 0 5px rgba(0,0,0,0.6);
+}
+
+.login_form .right .loging_icon img{
+    width: 20px;
+    margin: 5px 5px;
+}
+```
+
+Lets breakdown the new concepts introduced: 
+
+`background-image`: url(image/loging_bg.png);: This property sets an image as the background of an element. The image file path is placed within the URL() function.
+
+`background-size: cover;`: This property specifies the size of the background images. The cover value scales the background image to be as large as possible so that the area of the element is completely covered by the background image. This may mean the image is cropped to preserve its aspect ratio.
+
+`background-position: center;`: This property sets the initial position of a background image. The center value means the image is positioned at the center of the element.
+
+`position: relative;`: This property sets the type of positioning method used for an element. relative means the position is set relative to its normal position. This doesn't itself move the element, but it affects the positions of other properties like top, right, bottom, left.
+
+`top: -50px;`: This property affects the vertical position of a positioned element. This property has no effect on non-positioned elements. Here it's shifting the element 50 pixels upwards from its normal position because of the negative value.
+
+`left: -60px;`: This property affects the horizontal position of a positioned element. Here it's shifting the element 60 pixels to the left of its normal position because of the negative value.
+
+`border: 2px solid #6c14d0;`: This is a shorthand property for setting the border-width, border-style, and border-color of an element in a single declaration. Here it's creating a 2 pixel wide, solid border with the color #6c14d0.
+
+`border-radius: 5px;`: This property allows you to add rounded borders to an element. Here, it's setting a 5 pixel radius to round the corners of the border.
+
+`outline: none;`: This property sets the outline of an element. none means the element will have no outline.
+
+`::webkit-input-placeholder { color: black; opacity: 0.7; }`: This is a pseudo-element that allows you to style the placeholder text in input fields. The -webkit- prefix is used for Chrome, Safari, and newer versions of Opera. Here it's setting the color of the placeholder text to black with 70% opacity.
+
+`box-shadow: 0 0 5px rgba(0,0,0,0.6);`: This property adds shadow effects around an element's frame. The values correspond to horizontal offset, vertical offset, blur radius, and color of the shadow respectively. Here, it's creating a shadow with 5px blur radius, and a semi-transparent black color (60% opacity).
+
