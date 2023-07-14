@@ -10,7 +10,7 @@ I have purposely designed this demo project to take you through the **basics** a
 
 ## Course Structure 
 A break down of the course is: 
-- **Project Breif**  - Here we will describe what we are going to be building together, I will show you the completed project Blue Peter style.
+- **Project Brief**  - Here we will describe what we are going to be building together, I will show you the completed project Blue Peter style.
 
 - **Static HTML/CSS site** - We will cover the badics of HTML and CSS, we will understand how they work together
   
