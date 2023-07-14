@@ -21,4 +21,4 @@ A break down of the course is:
 - **Further Advancements** - We will discuss how we can build upon the skills we have learnt in the previous chapters can be utlised to add brand new features/functionality to our app.
 
 # Are you ready!?
-if so, [lets begin](https://github.com/michaelbarley/new-starter-demo-project/blob/main/1_project_breif.md)
+if so, [lets begin](https://github.com/michaelbarley/new-starter-demo-project/blob/main/1_project_brief.md)
