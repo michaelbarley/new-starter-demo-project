@@ -271,6 +271,61 @@ Explanation of the different parts:
 
 The box model allows us to add a border around elements, and to define space between elements. 
 
+### Positioning in CSS
+
+The position property in CSS determines how an element is positioned in the layout. There are five different position values:
+
+`static`: This is the default value. Elements are positioned according to the normal flow of the document, meaning they are positioned based on where they fall in the HTML.
+
+`relative`: A relative position element is positioned relative to its normal position. Setting the top, right, bottom, and left properties will cause the element to move relative to where it would normally have been.
+
+`absolute`: An absolute position element is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed). If an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling.
+
+`fixed`: A fixed position element is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled.
+
+`sticky`: A sticky position element is positioned based on the user's scroll position. It's like relative positioning, but it sticks in place when scrolling hits a specified point (determined by top, right, bottom, or left).
+
+### Display in CSS
+
+The display property in CSS determines how an element is displayed. There are several different display values:
+
+`block`: Block-level elements start on a new line and stretch out to the left and right as far as they can. Examples include `<div>`, `<p>`, and `<h1>`.
+
+`inline`: Inline elements can be placed alongside other elements without breaking the flow of the text. They only take up as much width as their content. Examples include `<span>`, `<a>`, and `<img>`.
+
+`inline-block`: This value is a hybrid of inline and block. It allows the element to sit inline with other elements, but you can still set width and height values like a block element.
+
+`none`: This value makes the element disappear from the page—it's as if it doesn't exist.
+
+`flex`: This value turns the element into a flexible container, making it easier to position and align its children. It's very useful for creating grid-like layouts.
+
+`grid`: This value turns the element into a grid container, making it easier to create complex layouts with rows and columns.
+Remember, CSS is all about understanding the relationships between different elements and knowing how to manipulate their display and position to create the desired effect. By mastering the display and position properties, you can take a big step toward creating complex and responsive layouts.
+
+### Sizing in CSS.
+
+CSS has a variety of properties to control the size of elements. You can adjust the width, height, and even max-width, min-width, max-height, and min-height of an element.
+
+`width and height`: These properties are used to set the width and height of an element. By default, these apply to the content box of the element, meaning they don't include padding, borders, or margins. For example, width: 200px; sets the element's width to 200 pixels.
+
+`max-width` and `max-height`: These properties set the maximum width and height an element can expand to. They're very useful for making designs that scale well on different screen sizes. For example, max-width: 100%; ensures that an element won't extend wider than its containing element.
+
+`min-width` and `min-height`: These properties set the minimum width and height an element can shrink to. They're helpful for ensuring that elements don't get too small to be usable or readable.
+
+Apart from these basic properties, there are also some units that you should be aware of:
+
+`Pixels (px)`: A pixel is a dot on the screen, and it's the smallest unit of measurement in screen display. However, on high-resolution devices, a CSS pixel is not always equal to a physical screen pixel.
+
+`Percent (%)`: Percent values are relative to the size of the parent element. For example, width: 50%; makes an element half the width of its parent.
+
+`Viewport units (vw, vh, vmin, vmax)`: These are relative to the viewport size. vw is a percentage of the viewport width, vh is a percentage of the viewport height, vmin is a percentage of the smallest side, and vmax is a percentage of the largest side.
+
+`em` and `rem`: These are relative units based on font sizes. em is relative to the font size of its closest parent, while rem is relative to the root (or html) element's font size. They're very useful for making responsive typography and spacing.
+
+`auto`: This value allows the browser to calculate the size based on other properties and content.
+
+`calc()`: This function allows you to perform calculations to determine CSS property values.
+
 ## 3. style.css
 Now lets create our first CSS file. Within our editor right click and make a `new file` and name it style.css. In our `index.html` in our `<head>` we are already including our CSS file with this line
 
@@ -473,58 +528,3 @@ The `:hover pseudo-class` is used to apply styles when the mouse hovers over an 
 
 The transition property adds an animation to an element when its properties change. It can make changes appear more smooth and gradual.
 Lastly, the `transform: translateX(6px);` rule moves the element 6px to the right along the X-axis.
-
-### Positioning in CSS
-
-The position property in CSS determines how an element is positioned in the layout. There are five different position values:
-
-`static`: This is the default value. Elements are positioned according to the normal flow of the document, meaning they are positioned based on where they fall in the HTML.
-
-`relative`: A relative position element is positioned relative to its normal position. Setting the top, right, bottom, and left properties will cause the element to move relative to where it would normally have been.
-
-`absolute`: An absolute position element is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed). If an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling.
-
-`fixed`: A fixed position element is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled.
-
-`sticky`: A sticky position element is positioned based on the user's scroll position. It's like relative positioning, but it sticks in place when scrolling hits a specified point (determined by top, right, bottom, or left).
-
-### Display in CSS
-
-The display property in CSS determines how an element is displayed. There are several different display values:
-
-`block`: Block-level elements start on a new line and stretch out to the left and right as far as they can. Examples include `<div>`, `<p>`, and `<h1>`.
-
-`inline`: Inline elements can be placed alongside other elements without breaking the flow of the text. They only take up as much width as their content. Examples include `<span>`, `<a>`, and `<img>`.
-
-`inline-block`: This value is a hybrid of inline and block. It allows the element to sit inline with other elements, but you can still set width and height values like a block element.
-
-`none`: This value makes the element disappear from the page—it's as if it doesn't exist.
-
-`flex`: This value turns the element into a flexible container, making it easier to position and align its children. It's very useful for creating grid-like layouts.
-
-`grid`: This value turns the element into a grid container, making it easier to create complex layouts with rows and columns.
-Remember, CSS is all about understanding the relationships between different elements and knowing how to manipulate their display and position to create the desired effect. By mastering the display and position properties, you can take a big step toward creating complex and responsive layouts.
-
-### Sizing in CSS.
-
-CSS has a variety of properties to control the size of elements. You can adjust the width, height, and even max-width, min-width, max-height, and min-height of an element.
-
-`width and height`: These properties are used to set the width and height of an element. By default, these apply to the content box of the element, meaning they don't include padding, borders, or margins. For example, width: 200px; sets the element's width to 200 pixels.
-
-`max-width` and `max-height`: These properties set the maximum width and height an element can expand to. They're very useful for making designs that scale well on different screen sizes. For example, max-width: 100%; ensures that an element won't extend wider than its containing element.
-
-`min-width` and `min-height`: These properties set the minimum width and height an element can shrink to. They're helpful for ensuring that elements don't get too small to be usable or readable.
-
-Apart from these basic properties, there are also some units that you should be aware of:
-
-`Pixels (px)`: A pixel is a dot on the screen, and it's the smallest unit of measurement in screen display. However, on high-resolution devices, a CSS pixel is not always equal to a physical screen pixel.
-
-`Percent (%)`: Percent values are relative to the size of the parent element. For example, width: 50%; makes an element half the width of its parent.
-
-`Viewport units (vw, vh, vmin, vmax)`: These are relative to the viewport size. vw is a percentage of the viewport width, vh is a percentage of the viewport height, vmin is a percentage of the smallest side, and vmax is a percentage of the largest side.
-
-`em` and `rem`: These are relative units based on font sizes. em is relative to the font size of its closest parent, while rem is relative to the root (or html) element's font size. They're very useful for making responsive typography and spacing.
-
-`auto`: This value allows the browser to calculate the size based on other properties and content.
-
-`calc()`: This function allows you to perform calculations to determine CSS property values.
