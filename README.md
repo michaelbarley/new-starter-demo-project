@@ -21,6 +21,32 @@ A break down of the course is:
 - **Further Advancements** - We will discuss how we can build upon the skills we have learnt in the previous chapters can be utlised to add brand new features/functionality to our app.
 
 # Project Breif
+<img width="1762" alt="Screenshot 2023-07-14 at 11 30 41" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/16c6c946-0018-4282-820c-51a1458a893c">
+
+[Video link](https://www.youtube.com/watch?v=bubzArfuxVo)
+
+**Title**: E-commerce Store Landing Page Development for Nike Trainers
+
+**Objective**: The aim of this project is to create a user-friendly, engaging, and visually appealing landing page for an e-commerce store that primarily sells Nike trainers.
+
+**Description**: The landing page will be simple but detailed, comprising several sections. Each section will serve a specific purpose and contribute to the overall user experience:
+
+- **Hero Section**: The introductory section will captivate visitors with an attractive headline, sub-heading, and a compelling call-to-action (CTA) button.
+  
+- **Product Display Section**: There will be dedicated areas to showcase a variety of Nike trainers, both popular and new arrivals, to cater to different customer preferences.
+
+- **About Section**: A section that provides information about the e-commerce store and its mission. This will help to build a stronger connection with customers and foster trust in the brand.
+
+- **Review Section**: This section will exhibit customer testimonials and ratings, helping to build trust among potential buyers.
+Services Section: This area will highlight the e-commerce store's unique selling propositions such as fast delivery, a 10-day replacement policy, and round-the-clock customer support.
+
+- **Login Form**: A simple and secure login form for users to access their accounts.
+  
+- **Footer Section**: The footer will contain important links and information including contact details, FAQ, shipping and return policies, and payment options. Additionally, a newsletter subscription form will be provided to engage users in a long-term relationship.
+
+
+
+
 
 
 
