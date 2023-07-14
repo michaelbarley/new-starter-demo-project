@@ -1435,3 +1435,99 @@ linear-gradient(to left, #c72092 , #6c14d0);: The linear-gradient() function cre
 `transform: scale(1.2);`: The transform CSS property lets you rotate, scale, skew, or translate an element. Here, it's used with scale(1.2), which means the image will grow to 120% of its original size when hovered over.
 
 `transition: 0.3s;`: The transition property is a shorthand property for transition-property, transition-duration, transition-timing-function, and transition-delay. It allows elements to change values over a specified duration. Here it's set to 0.3s, meaning that any change will transition smoothly over a 300 millisecond period.
+
+18. Looking in the browser, it should now look like:
+<img width="1664" alt="Screenshot 2023-07-14 at 16 40 58" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/0b810c5d-eb0b-4693-9f4e-893e086f4a53">
+
+### Services Section
+19. In your index.html, outside of your closing review </div>. Enter:
+```html
+    <div class="services" id="Servises">
+        <h1>our<span>services</span></h1>
+
+        <div class="services_cards">
+            <div class="services_box">
+                <i class="fa-solid fa-truck-fast"></i>
+                <h3>Fast Delivery</h3>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                </p>
+            </div>
+
+            <div class="services_box">
+                <i class="fa-solid fa-rotate-left"></i>
+                <h3>10 Days Replacement</h3>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                </p>
+            </div>
+
+            <div class="services_box">
+                <i class="fa-solid fa-headset"></i>
+                <h3>24 x 7 Support</h3>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                </p>
+            </div>
+        </div>
+
+    </div>
+```
+
+No new topics have been introduced here!
+
+### Styling The Services Section
+20. Now lets style the section, in `style.css` underneath our existing code enter:
+```css
+.services{
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 80px 0 10px 0;
+}
+
+.services h1{
+    font-size: 60px;
+    text-transform: uppercase;
+}
+
+.services h1 span{
+    margin-left: 15px;
+    background: linear-gradient(to left, #c72092 , #6c14d0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;    
+}
+
+.services .services_cards{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    top: 50px;
+}
+
+.services .services_box i{
+    font-size: 60px;
+    color: orange;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.services .services_box h3{
+    margin-bottom: 12px;
+    font-size: 19px;
+}
+
+.services .services_box p{
+    text-align: center;
+    color: #919191;
+    margin-bottom: 60px;
+}
+```
+
+No new topics have been introduced here!
+
+21. Looking in the browser, it should now look like:
+<img width="1764" alt="Screenshot 2023-07-14 at 16 46 22" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/1035073b-48af-40d6-bd6f-b3c5c702b4c6">
