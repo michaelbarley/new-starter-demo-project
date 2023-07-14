@@ -92,7 +92,18 @@ WHEN I am styling the webpage, I WANT to use CSS effectively, SO THAT the webpag
 **Testing Work-item**:
 WHEN I am testing the webpage, I WANT to ensure it displays correctly in different browsers, SO THAT all users have a consistent viewing experience.
 
+# Static HTML/CSS site
+By the end of this section you will have a fully functionl ecommerce landing page written in HTML & CSS! Lets do this 🚀
 
+## 1. Folder Setup 
+1. Open Finder (located usually on your dock)
+2. in the finder window click on `Documents`
+3. Right click (on mac, right click is sometimes disabled you may have to two-finger click on the lower right of your trackpad) and click on `New Folder`
+4. Name this folder `Shoes`
+5. Click into `Shoes` folder and create a new folder named `image`
+6. go to https://drive.google.com/drive/folders/1VCFjiogucrQHMW24E_EqDw3L18cfJNLz?usp=share_link. Shift click all the images, then right click and download
+7. once the images have donwloaded they should appear if you Navigate to `Downloads` in finder.
+8. Drag and drop all those downloaded images into your `Documents/Shoes/image` directory
 
 
 
