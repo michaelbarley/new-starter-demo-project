@@ -1739,3 +1739,6 @@ Lets breakdown the new concepts introduced:
 
 `box-shadow: 0 0 5px rgba(0,0,0,0.6);`: This property adds shadow effects around an element's frame. The values correspond to horizontal offset, vertical offset, blur radius, and color of the shadow respectively. Here, it's creating a shadow with 5px blur radius, and a semi-transparent black color (60% opacity).
 
+
+24. Looking in the browser, it should now look like:
+<img width="1658" alt="Screenshot 2023-07-14 at 16 59 31" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/ed579f14-9ba6-4d7d-bcd4-ba06044cf519">
