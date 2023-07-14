@@ -1317,7 +1317,7 @@ This section also involes some duplication, but dont worry!
 
 Let's break this down: 
 
-`<strong>Ranidi Lochana</strong>`: The <strong> HTML element indicates that its contents have strong importance, seriousness, or urgency. Browsers typically render the contents in bold type.
+`<strong>Ranidi Lochana</strong>`: The `<strong>` HTML element indicates that its contents have strong importance, seriousness, or urgency. Browsers typically render the contents in bold type.
 
 ### Styling the Reviews Section
 17. Now lets style the section, in `style.css` underneath our existing code enter:
