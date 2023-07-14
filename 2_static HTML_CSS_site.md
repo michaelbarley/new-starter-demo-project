@@ -231,6 +231,225 @@ Each declaration includes a CSS property name and a value, separated by a colon.
 
 Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded by curly braces.
 
+### The CSS Box Model
+In CSS, the term "box model" is used when talking about design and layout.
+
+The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content. The image below illustrates the box model:
+<img width="864" alt="Screenshot 2023-07-14 at 15 26 12" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/42a57db0-f63d-4fbc-9c53-9cfe0ad7307e">
+
+Explanation of the different parts:
+
+**Content** - The content of the box, where text and images appear
+**Padding** - Clears an area around the content. The padding is transparent
+**Border** - A border that goes around the padding and content
+**Margin** - Clears an area outside the border. The margin is transparent
+
+The box model allows us to add a border around elements, and to define space between elements. 
+
+## 3. style.css
+Now lets create our first CSS file. Within our editor right click and make a `new file` and name it style.css. In our `index.html` in our `<head>` we are already including our CSS file with this line
+
+`<link rel="stylesheet" href="style.css">`
+
+8. Within `style.css` enter this:
+```css
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    width: 15px;
+}
+
+::-webkit-scrollbar-track{
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.25);
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background: linear-gradient(to top, #c72092 , #6c14d0);
+}
+
+section{
+    width: 100%;
+    height: 100vh;
+    background-image: url(image/bg1.png);
+    background-size: cover;
+    background-position: center;
+}
+
+section nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 0 8px rgba(0,0,0,0.6);
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+section nav .logo{
+    font-size: 35px;
+    color: #c72092;
+    margin: 5px 0;
+    cursor: pointer;
+    position: relative;
+    left: -4%;
+}
+
+section nav .logo span{
+    color: #6c14d0;
+    text-decoration: underline;
+}
+
+section nav ul{
+    list-style: none;
+}
+
+section nav ul li{
+    display: inline-block;
+    margin: 5px 15px;
+}
+
+section nav ul li a{
+    text-decoration: none;
+    color: black;
+    transition: 0.2s;
+}
+
+section nav ul li a:hover{
+    color: #c72092;
+}
+
+section nav .icons i{
+    margin: 0 4px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+section nav .icons i:hover{
+    color: #c72092;
+}
+
+section .main .main_content{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+section .main .main_content .main_text h1{
+    font-size: 90px;
+    line-height: 70px;
+    font-family: pyxidium quick;
+    background: linear-gradient(to right, #c72092,#6c14d0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    top: 45px;
+    left: 5%;
+}
+
+section .main .main_content .main_text h1 span{
+    font-size: 70px;
+    background: linear-gradient(to right, #c72092,#6c14d0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+section .main .main_content .main_text p{
+    width: 600px;
+    text-align: justify;
+    line-height: 21px;
+    position: relative;
+    top: 85px;
+    left: 5%;
+}
+
+section .main .main_content .main_image img{
+    width: 650px;
+    position: relative;
+    left: 20px;
+    top: 75px;
+}
+
+section .main .social_icon{
+    position: absolute;
+    top: 50%;
+    left: 98%;
+    transform: translate(-50%,-50%);
+    font-size: 19px;
+}
+
+section .main .social_icon i{
+    margin: 8px 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+section .main .social_icon i:hover{
+    color: #c72092;
+}
+
+section .main .button{
+    position: absolute;
+    left: 6%;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background: linear-gradient(to right,#c72092 , #6c14d0);
+}
+
+section .main .button a{
+    color: white;
+    text-decoration: none;
+}
+
+section .main .button i{
+    color: white;
+    margin-left: 5px;
+    transition: 0.3s;
+}
+
+section .main .button:hover i{
+    transform: translateX(6px);
+}
+```
+
+Lets break this down:
+
+`*{...}`: The asterisk is a wildcard selector that matches any element. This rule is applying styles to every element on the page. It's setting margin and padding to 0, which means all elements start with no space around them and no padding inside them. box-sizing: border-box makes the width and height properties include content, padding, and border (but not margin) within the element's total width and height. Lastly, font-family: Arial, Helvetica, sans-serif is setting the default font for the entire webpage to Arial, Helvetica, or the system's default sans-serif font.
+
+`html{...}`: This is applying styles to the root HTML element. scroll-behavior: smooth allows for smooth scrolling when clicking on links that navigate to different parts of the page.
+
+`::-webkit-scrollbar{...}`: This pseudo-element is used to style the scrollbar. In this case, it's setting the scrollbar's width to 15px.
+
+`::-webkit-scrollbar-track{...}` and `::-webkit-scrollbar-thumb{...}`: These are styling the scrollbar's track and thumb (the part you click and drag) respectively. It's giving them rounded corners (border-radius), and the thumb is getting a gradient background color.
+
+`section{...}`: This rule is styling section elements. It's setting the width and height to 100% of the viewport width and height (100vw and 100vh), and it's setting the background image to image/bg1.png, which will cover the entire section and be centered.
+
+`section nav{...}`: This rule is styling nav elements inside section elements. It's making them into a flex container (display: flex), aligning the items along the center of the cross axis (align-items: center), and justifying the content to be evenly distributed in the container (justify-content: space-around). It also adds a shadow (box-shadow), gives it a white background, fixes it to the top of the page (position: fixed) and ensures it always appears on top (z-index: 100).
+
+`section nav .logo{...}`: This rule is styling elements with the class .logo inside nav elements inside section elements. It's setting the font size, color, margin, and so on. Note that cursor: pointer changes the mouse cursor to a pointer when hovering over the logo, indicating it's clickable.
+
+Other rules follow the same pattern, selecting elements based on their tag, class, or hierarchy and applying styles to them. For example, section nav ul li a:hover applies styles to a elements when hovered over, but only if they're inside li elements inside ul elements inside nav elements inside section elements.
+
+The `:hover pseudo-class` is used to apply styles when the mouse hovers over an element. For example, section nav .icons i:hover changes the color of the icons when hovered over.
+
+The transition property adds an animation to an element when its properties change. It can make changes appear more smooth and gradual.
+Lastly, the `transform: translateX(6px);` rule moves the element 6px to the right along the X-axis.
+
+
  
  
   
