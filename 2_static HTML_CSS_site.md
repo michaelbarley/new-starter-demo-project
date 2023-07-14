@@ -467,9 +467,9 @@ The position property in CSS determines how an element is positioned in the layo
 
 The display property in CSS determines how an element is displayed. There are several different display values:
 
-`block`: Block-level elements start on a new line and stretch out to the left and right as far as they can. Examples include <div>, <p>, and <h1>.
+`block`: Block-level elements start on a new line and stretch out to the left and right as far as they can. Examples include `<div>`, `<p>`, and `<h1>`.
 
-`inline`: Inline elements can be placed alongside other elements without breaking the flow of the text. They only take up as much width as their content. Examples include <span>, <a>, and <img>.
+`inline`: Inline elements can be placed alongside other elements without breaking the flow of the text. They only take up as much width as their content. Examples include `<span>`, `<a>`, and `<img>`.
 
 `inline-block`: This value is a hybrid of inline and block. It allows the element to sit inline with other elements, but you can still set width and height values like a block element.
 
