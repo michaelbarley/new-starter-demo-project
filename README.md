@@ -177,7 +177,26 @@ The **HTML element** is everything from the start tag to the end tag:
 3. In finder double click on `index.html` and it will open it up in your defult browser. You should now see our HTML rendered in the browser! 
 <img width="1317" alt="Screenshot 2023-07-14 at 14 10 31" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/8bb3f18a-06f8-469c-9d15-d36ea4258ae4">
 
+4. Now lets update our `index.html` with a few new tags, modify `index.html` `<head>` like so: 
+```html
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike - Just Do It</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="image/logo.png">
+</head>
+```
 
+let's break down each of these tags:
 
+**<meta charset="UTF-8">**: The <meta> tag provides metadata about the HTML document. Metadata isn't displayed on the page but is machine parsable. In this case, the charset attribute specifies the character encoding for the HTML document. UTF-8 is a universal character set that includes all characters from all writing systems, so it's good practice to use this to support international characters and symbols.
 
+**<meta http-equiv="X-UA-Compatible" content="IE=edge">**: This <meta> tag is used for compatibility with Internet Explorer. It tells IE to display the webpage in the highest mode available, thus ensuring the webpage uses the latest rendering engine. edge means the very latest version that IE has to offer.
 
+**<meta name="viewport" content="width=device-width, initial-scale=1.0">**: This <meta> tag is used for responsive web design. It sets the width of the page to follow the screen-width of the device (which will vary depending on the device). The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser.
+
+**<link rel="stylesheet" href="style.css">**: The <link> tag defines the relationship between the current document and an external resource. In this case, it's linking to an external CSS file (style.css) which provides the styles for the HTML document. The rel attribute specifies the relationship as a "stylesheet".
+
+**<link rel="shortcut icon" href="image/logo.png">**: This <link> tag is used to specify a shortcut icon or favicon for the HTML document. The favicon is a small icon that appears in the browser tab next to the webpage's title. The href attribute specifies the path to the image file.
