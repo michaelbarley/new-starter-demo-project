@@ -1182,3 +1182,237 @@ If we take a look at the result in our browser we should see:
 
 <img width="1684" alt="Screenshot 2023-07-15 at 19 23 24" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/0613c6c6-9689-4108-8d74-b418dd88910e">
 
+## LoginForm.vue
+In your LoginForm.vue, enter:
+```vue
+<template>
+    <div class="login-form">
+      <div class="left">
+        <img src="image/logshoes.png">
+      </div>
+  
+      <div class="right">
+        <h1>Welcome Back!</h1>
+  
+        <form @submit="submitForm">
+          <p>User Name</p>
+          <div class="user">
+            <i class="fa-solid fa-user"></i>
+            <input v-model="username" type="text" name="user" placeholder="User Name" class="username">
+          </div>
+  
+          <p class="password-tag">Password</p>
+          <div class="password">
+            <i class="fa-solid fa-lock"></i>
+            <input v-model="password" type="password" name="password" placeholder="Password">
+          </div>
+  
+          <p class="forget">Forget Password ?</p>
+  
+          <button type="submit">Login</button>
+          <div class="loging_icon">
+            <a href="#"><img src="image/google.png"></a>
+            <a href="#"><img src="image/facebook.png"></a>
+            <a href="#"><img src="image/twitter.png"></a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </template>
+  
+  <script>
+  export default {
+    name: 'LoginForm',
+    data() {
+      return {
+        username: '',
+        password: ''
+      };
+    },
+    methods: {
+      submitForm() {
+        // Handle form submission logic here
+        // You can access the form values using this.username and this.password
+      }
+    }
+  }
+  </script>
+  
+  <style scoped>
+  .login-form {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url(/public/image/loging_bg.png);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .login-form .left img {
+    width: 650px;
+  }
+  
+  .login-form .right {
+    position: relative;
+    top: -50px;
+    left: -60px;
+    padding: 50px 80px;
+  }
+  
+  .login-form .right h1 {
+    font-family: prevattscriptssk;
+    font-size: 45px;
+    margin-bottom: 40px;
+  }
+  
+  .login-form .right p {
+    margin-bottom: 5px;
+  }
+  
+  .login-form .right .user {
+    border: 2px solid #6c14d0;
+    border-radius: 5px;
+    width: 350px;
+    height: 40px;
+    display: flex;
+  }
+  
+  .login-form .right .user i {
+    position: relative;
+    top: 9px;
+    left: 15px;
+    color: #c72092;
+  }
+  
+  .login-form .right .user .username {
+    position: relative;
+    left: 9%;
+    width: 295px;
+    background: none;
+    outline: none;
+    border: none;
+    display: flex;
+    font-size: 15px;
+  }
+  
+  .login-form .right .password-tag {
+    margin: 15px 0 5px 0;
+  }
+  
+  .login-form .right .password {
+    border: 2px solid #6c14d0;
+    border-radius: 5px;
+    width: 350px;
+    height: 40px;
+    display: flex;
+  }
+  
+  .login-form .right .password i {
+    position: relative;
+    top: 9px;
+    left: 15px;
+    color: #c72092;
+  }
+  
+  .login-form .right .password input {
+    position: relative;
+    left: 9%;
+    width: 295px;
+    background: none;
+    border: none;
+    outline: none;
+    display: flex;
+    font-size: 15px;
+  }
+  
+  ::-webkit-input-placeholder {
+    color: black;
+    opacity: 0.7;
+  }
+  
+  .login-form .right .forget {
+    position: relative;
+    left: 60%;
+    margin: 6px 0 10px 0;
+    cursor: pointer;
+  }
+  
+  .login-form .right button {
+    width: 350px;
+    color: white;
+    padding: 7px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    background: linear-gradient(to right, #c72092 , #6c14d0);
+  }
+  
+  .login-form .right .loging-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+  }
+  
+  .login-form .right .loging-icon a {
+    width: 30px;
+    height: 30px;
+    margin: 0 2px;
+    border-radius: 50%;
+    background: #f3f3f3;
+    box-shadow: 0 0 5px rgba(0,0,0,0.6);
+  }
+  
+  .login-form .right .loging-icon img {
+    width: 20px;
+    margin: 5px 5px;
+  }
+  </style>
+```
+
+Let's explain the new stuff: 
+
+**`v-model`**:  the v-model directive is used for two-way data binding between form input elements and the component's data. It allows you to automatically sync the data between the form inputs and the component's data properties.
+
+When you use v-model on an input element, such as v-model="username", it creates a connection between the input value and the username data property. Any changes made in the input element will be automatically reflected in the username property, and vice versa.
+
+In the LoginForm.vue component, we have two input fields: one for the username and one for the password. We bind these input fields to the component's data using v-model.
+
+For example, in the username input field:
+
+```vue
+<input v-model="username" type="text" name="user" placeholder="User Name" class="username">
+```
+
+Here, the v-model="username" binds the input value to the username data property. So, whenever the user types something in the input field, the username property in the component will be updated automatically.
+
+Similarly, we bind the password input field to the password data property:
+
+```vue
+<input v-model="password" type="password" name="password" placeholder="Password">
+```
+
+By using v-model, you eliminate the need for manually handling the input and change events and updating the data properties yourself. Vue.js takes care of synchronizing the input values and the component's data for you.
+
+In the component's data section, you will see:
+
+```vue
+data() {
+  return {
+    username: '',
+    password: ''
+  };
+},
+```
+
+These username and password data properties will store the values entered by the user in the corresponding input fields. You can access these values in the submitForm method or any other methods in the component.
+
+This way, Vue.js simplifies form handling by providing a convenient way to bind form inputs to data properties and keep them in sync automatically.
+
+If we now check in our browser we should see: 
+
+<img width="1673" alt="Screenshot 2023-07-15 at 19 32 52" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/e00fda27-62c2-4257-8f96-f49e5cfb55bf">
+
