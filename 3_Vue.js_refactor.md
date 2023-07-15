@@ -85,10 +85,6 @@ In the context of our static HTML and CSS website, we can identify the following
 **LoginForm**: A standalone component representing a user login form. It encapsulates fields like username and password and possibly options for social login or forgot password.
 
 **Footer**: The footer of the page, containing various information and links. It's a standard component for virtually every website.
-- **Contact**: A subcomponent of the Footer. It represents the contact information section, typically containing email, phone number, and address.
-- **GetHelp**: A subcomponent of the Footer. This section provides help-related links, such as FAQs, return policy, or customer support.
-- **OurStores**: A subcomponent of the Footer. It represents a section displaying physical store locations if applicable.
-- **Newsletter**: A subcomponent of the Footer. This section allows users to subscribe to the site's newsletter, fostering ongoing engagement.
   
 By breaking down our static HTML site into these reusable components, we ensure that each piece of functionality is encapsulated, maintainable, and easy to manage. If we need to change the appearance or functionality of one of these components, we only have to make the change in one place. This approach promotes consistency across the site, reduces the likelihood of errors, and makes the code easier to understand and work with.
 
@@ -1416,3 +1412,175 @@ If we now check in our browser we should see:
 
 <img width="1673" alt="Screenshot 2023-07-15 at 19 32 52" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/e00fda27-62c2-4257-8f96-f49e5cfb55bf">
 
+## Footer.vue
+In your Footer.vue, enter:
+```vue
+<template>
+    <footer>
+      <div class="footer_main">
+        <div class="tag">
+          <h1>Contact</h1>
+          <a href="#"><i class="fa-solid fa-house"></i>123/Middlesbrough/United Kingdom</a>
+          <a href="#"><i class="fa-solid fa-phone"></i>+94 12 345 6789</a>
+          <a href="#"><i class="fa-solid fa-envelope"></i>contact@gmail.com</a>
+        </div>
+  
+        <div class="tag">
+          <h1>Get Help</h1>
+          <a href="#" class="center">FAQ</a>
+          <a href="#" class="center">Shipping</a>
+          <a href="#" class="center">Returns</a>
+          <a href="#" class="center">Payment Options</a>
+        </div>
+  
+        <div class="tag">
+          <h1>Our Stores</h1>
+          <a href="#" class="center">UK</a>
+          <a href="#" class="center">Japan</a>
+        </div>
+  
+        <div class="tag">
+          <h1>Newsletter</h1>
+          <div class="search_bar">
+            <input type="text" placeholder="Your email here">
+            <button type="submit">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </template>
+  
+  <script>
+  export default {
+    name: 'Footer',
+  };
+  </script>
+  
+  <style>
+  /* Styles for the footer component */
+  footer {
+    width: 100%;
+  }
+  
+  .footer_main {
+    width: 100%;
+    background: #f3f1f1;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .tag {
+    margin: 10px 0;
+  }
+  
+  .tag .center {
+    text-align: center;
+  }
+  
+  .tag h1 {
+    font-size: 25px;
+    margin: 25px 0;
+    color: #1c0080;
+  }
+  
+  .tag a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    margin: 9px 0;
+  }
+  
+  .tag a i {
+    padding: 0 10px;
+    transition: 0.3s;
+  }
+  
+  .tag a i:hover {
+    color: #c72092;
+  }
+  
+  .tag .social_link {
+    display: flex;
+  }
+  
+  .tag .social_link a {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.05);
+    position: relative;
+    margin: 0 5px;
+    z-index: 10;
+    overflow: hidden;
+  }
+  
+  .tag .social_link a .fa-brands {
+    font-size: 15px;
+    line-height: 30px;
+    z-index: 10;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .tag .social_link a:hover i {
+    color: white;
+  }
+  
+  .tag .social_link a::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -90px;
+    background: linear-gradient(-45deg, #c72092, #6c14d0);
+    position: absolute;
+    z-index: -10;
+    transition: 0.5s;
+  }
+  
+  .tag .social_link a:hover::after {
+    left: 0;
+  }
+  
+  .tag .search_bar {
+    width: 230px;
+    height: 30px;
+    background: rgb(202, 202, 202);
+    border-radius: 25px;
+  }
+  
+  .tag .search_bar input {
+    width: 200px;
+    padding: 2px 0;
+    position: relative;
+    top: 17%;
+    left: 6%;
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 13px;
+  }
+  
+  .tag .search_bar button {
+    padding: 7px 15px;
+    background: linear-gradient(to right, #c72092, #6c14d0);
+    border: none;
+    margin-top: 15px;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+  }
+  </style>
+```
+
+No new concepts have been introduced here 🙌🏻
+
+If we check what the result is in our browser we should see:
+
+<img width="1680" alt="Screenshot 2023-07-15 at 19 43 42" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/1613eed7-9b84-48ca-9181-6e35dd86b802">
+
+## Congratulations
+Well done! you made it through this section. I hope you now understand how breaking our website into small usable components helps us. I also hope you now understand some of the value vue.js brings us. There is alot more to learn in terms of vue.js but throughout this project I have shown you the very basics. We now have a beautiful vue.js application utalising components and data. In the next section we will move that data into a `database` and retrieve it using an `API` which we will build together using the `Laravel` framework
