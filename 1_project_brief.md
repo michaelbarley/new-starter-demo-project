@@ -1,5 +1,5 @@
 # Project Brief
-<img width="1762" alt="Screenshot 2023-07-14 at 11 30 41" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/16c6c946-0018-4282-820c-51a1458a893c">
+<img width="1762" alt="Screenshot 2023-07-14 at 11 30 41" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/1de22eb5-0271-43d8-86a8-b2eb5e3192a3">
 
 [Video link](https://www.youtube.com/watch?v=bubzArfuxVo)
 
