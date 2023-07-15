@@ -10,7 +10,6 @@ By the end of this section you will have a fully functional ecommerce landing pa
 6. go to https://drive.google.com/drive/folders/1VCFjiogucrQHMW24E_EqDw3L18cfJNLz?usp=share_link. Shift click all the images, then right click and download
 7. once the images have donwloaded they should appear if you Navigate to `Downloads` in finder.
 8. Drag and drop all those downloaded images into your `Documents/Shoes/image` directory
-<img width="908" alt="Screenshot 2023-07-14 at 13 52 10" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/63ac34c0-f313-42b2-a053-0cd3faf40342">
 
 ## 2. index.html
 Now lets create our first HTML file.
@@ -78,10 +77,8 @@ The **HTML element** is everything from the start tag to the end tag:
 <h1>My First Heading</h1>
 <p>My first paragraph.</p>
 ```
-<img width="846" alt="Screenshot 2023-07-14 at 14 10 55" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/cb369c56-37d8-439b-ab19-1c179ce74f54">
 
-3. In finder double click on `index.html` and it will open it up in your defult browser. You should now see our HTML rendered in the browser! 
-<img width="1317" alt="Screenshot 2023-07-14 at 14 10 31" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/8bb3f18a-06f8-469c-9d15-d36ea4258ae4">
+3. In finder double click on `index.html` and it will open it up in your defult browser.
 
 4. Now lets update our `index.html` with a few new tags, modify `index.html` `<head>` like so: 
 ```html
@@ -144,8 +141,8 @@ let's break down each of these tags:
 Note that the `<nav>` tag is not required for all lists of links, but is useful for identifying blocks of major navigation links, and can be particularly helpful in accessibility as it allows screen readers to understand the context of the links.
 
 6. Now you should see this in your browser
-  <img width="476" alt="Screenshot 2023-07-14 at 14 27 36" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/69580b80-5c02-417b-9d56-f0c8e4d247f8">
- 
+ <img width="476" alt="Screenshot 2023-07-14 at 14 27 36" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/5c72931b-432f-4879-8d84-2ee5ab7567e0">
+
 ### Header
 Within the same `<section>` tag as your nag but underneath it place this:
 ```html
@@ -191,7 +188,8 @@ let's break down each of these tags:
 `<a href="#">SHOP NOW</a>`: This is an anchor tag (a tag) which is used to create a clickable link. In this case, it's being used to create a "SHOP NOW" button. The href attribute normally specifies the URL that the link leads to. The "#" value is a placeholder and means that this link doesn't actually go anywhere at the moment.
 
 7. Now you should see this in your browser
- <img width="1299" alt="Screenshot 2023-07-14 at 14 41 13" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/6175c8b8-b836-4114-a18d-7b157be1835a">
+<img width="1299" alt="Screenshot 2023-07-14 at 14 41 13" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/da45e54c-1634-4c70-8ffc-9eda628b82be">
+
 
  ### Styling our Navigation Bar And Header
  So far we have the basic structure of our site thanks to HTML, but you must admit, its very **ugly** lets style our HTML elements using CSS 🔥
@@ -221,7 +219,6 @@ CSS removed the style formatting from the HTML page!
   
  ### CSS Syntax
  A CSS rule consists of a selector and a declaration block.
-<img width="612" alt="Screenshot 2023-07-14 at 14 47 32" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/27d8bf11-39d5-44f3-9b53-5ba46e8db0de">
 
 The selector points to the HTML element you want to style.
 
@@ -260,7 +257,7 @@ Using these selectors and combinators, you can target pretty much any element on
 In CSS, the term "box model" is used when talking about design and layout.
 
 The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content. The image below illustrates the box model:
-<img width="864" alt="Screenshot 2023-07-14 at 15 26 12" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/42a57db0-f63d-4fbc-9c53-9cfe0ad7307e">
+<img width="1132" alt="Screenshot 2023-07-15 at 20 01 34" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/3062d05a-652a-44ca-95c3-78d29d28c81e">
 
 Explanation of the different parts:
 
@@ -532,7 +529,7 @@ The transition property adds an animation to an element when its properties chan
 Lastly, the `transform: translateX(6px);` rule moves the element 6px to the right along the X-axis.
 
 9. Lets look in the browser, and BOOM! look at that beauty 🔥 😍
-<img width="1446" alt="Screenshot 2023-07-14 at 15 48 56" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/75e11efc-1860-4609-9a55-acefae79dd4e">
+<img width="1762" alt="Screenshot 2023-07-14 at 11 30 41" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/51e46445-31ec-4709-bf7f-5b1f1ac9877f">
 
 ### Products Section
 This next section contains ALOT of duplication, in upcoming sections we will solve this dont worry! 
@@ -898,7 +895,7 @@ Lets break that down:
 `.products .box .card .products_text .btn{...}`: text-decoration: none; removes the underline from links. The padding and background properties have been previously covered. The new background color is a linear gradient, and color: white; changes the color of the text.
 
 12. Looking at this in the browser now should look like:
-<img width="1441" alt="Screenshot 2023-07-14 at 16 09 31" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/0b9b0f08-a171-4bd2-a798-4cd6185bc92b">
+<img width="1781" alt="Screenshot 2023-07-14 at 16 05 51" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/59e2d84a-4778-4339-a0f7-0439edc33e03">
 
 ### About Section
 13. In your index.html, outside of your closing products `</div>`. Enter:
