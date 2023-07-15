@@ -1919,3 +1919,5 @@ Congratulations! Your hard work, dedication, and determination have truly paid o
 
 ![image](https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/b4b45ae0-2251-485e-b173-59fa912023ef)
 
+# Ready for the next section? 
+[lets go!](https://github.com/michaelbarley/new-starter-demo-project/blob/main/3_Vue.js_refactor.md)
