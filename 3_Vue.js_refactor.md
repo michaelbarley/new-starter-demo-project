@@ -115,9 +115,48 @@ vue create shoes-frontend
 ```
 
 In the setup it will ask you which version of vue do you want, Select vue 2. if you `cd` into the project directory and run `yarn serve` you will be prompted wih a url, if you visit the URL in the browser you should see: 
-<img width="704" alt="Screenshot 2023-07-15 at 15 00 39" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/0aa18f9b-e4df-42f1-b41b-9c637a65d3da">
-<img width="710" alt="Screenshot 2023-07-15 at 15 01 06" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/e817ed70-6e56-4007-934b-5a54bb20bd63">
 <img width="1308" alt="Screenshot 2023-07-15 at 15 02 03" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/a00a7916-5969-48fe-b818-283f1115800a">
+
+## Creating our components 
+open up `shoes-frontend` in your code editor 
+
+Within the src/components directory, create the following files:
+
+**Header.vue**: This file will contain the component for the site's header, including the logo and shopping cart.
+
+
+**Navigation.vue**: This file will contain the component for the navigation links.
+
+**Slider.vue**: This file will contain the component for the image carousel/slider.
+
+**NewArrival.vue**: This file will contain the component for displaying newly arrived products.
+
+**ProductCard.vue**: This file will contain the component for each individual product within the NewArrival section.
+
+**Review.vue**: This file will contain the component for showcasing customer reviews.
+
+**ReviewCard.vue**: This file will contain the component for each individual review within the Review section.
+
+**Services.vue**: This file will contain the component for displaying the site's services.
+
+**ServiceCard.vue**: This file will contain the component for each individual service within the Services section.
+
+**LoginForm.vue**: This file will contain the component for the login form.
+
+**Footer.vue**: This file will contain the component for the footer of the page.
+
+**Contact.vue**: This file will contain the component for the contact information section of the Footer.
+
+**GetHelp.vue**: This file will contain the component for the help-related links section of the Footer.
+
+**OurStores.vue**: This file will contain the component for the store locations section of the Footer.
+
+**Newsletter.vue**: This file will contain the component for the newsletter subscription section of the Footer.
+
+Please ensure each of these files is created with the .vue extension, as this is the standard file extension for Vue.js single-file components.
+
+
+
 
 
 
