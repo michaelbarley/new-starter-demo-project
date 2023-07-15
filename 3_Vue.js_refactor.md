@@ -1178,3 +1178,7 @@ This way, we can easily change the icon for each service by updating the icon pr
 
 So, in summary, computed properties are like handy helpers that calculate and provide us with derived values based on existing data properties. They help us simplify our code, make it more maintainable, and keep our templates clean by encapsulating the logic for derived values separately.
 
+If we take a look at the result in our browser we should see: 
+
+<img width="1684" alt="Screenshot 2023-07-15 at 19 23 24" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/0613c6c6-9689-4108-8d74-b418dd88910e">
+
