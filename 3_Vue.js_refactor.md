@@ -228,6 +228,8 @@ section{
 
 This is a basic structure of the App.vue file. It imports the components and includes them within the <template> section. All the imported components are registered in the components property of the Vue instance. Please note that the actual implementation will depend on the specifics of the site's design and structure.
 
+Regarding the `<style>` section in the App.vue file, it includes some CSS that will be applied globally across your application. Global styles are styles that are not scoped to a particular component, but instead apply to all elements throughout your application.
+
 ## Header 
 
 
