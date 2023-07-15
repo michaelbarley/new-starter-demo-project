@@ -1,4 +1,4 @@
-# Vue.js_refactor
+# Vue.js Refactor
 
 By the end of this section you will have converted our static website into a Vue.js application 🚀
 
