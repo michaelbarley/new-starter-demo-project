@@ -456,15 +456,192 @@ As you can see, we are just chopping up our static HTML and CSS application, sep
 If we run `yarn serve` in the terminal and go to the url it generates you should see in the browser: 
 <img width="1314" alt="Screenshot 2023-07-15 at 18 14 35" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/1b905e5c-db36-42fc-bdc9-bff5892c2f9e">
 
+## NewArival.vue
+In your Header.vue, enter:
+```vue
+<template>
+    <div class="products" id="Products">
+      <h1>Products</h1>
+      <div class="box">
+        <ProductCard v-for="product in products" :key="product.id" :product="product"/>
+      </div>
+    </div>
+  </template>
+  
+  <script>
+  import ProductCard from './ProductCard.vue';
+  
+  export default {
+    components: {
+      ProductCard
+    },
+    data() {
+      return {
+        products: [
+          {
+            id: 1,
+            image: "image/shoes1.png",
+            name: "NIKE",
+            description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+            price: "$100.99",
+            stars: {
+              full: 5,
+              half: 0,
+              empty: 0
+            }
+          },
+          {
+            id: 2,
+            image: "image/shoes2.png",
+            name: "NIKE",
+            description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+            price: "$110.99",
+            stars: {
+              full: 5,
+              half: 0,
+              empty: 0
+            }
+          },
+        ]
+      }
+    }
+  }
+  </script>
+  
+  <style scoped>
+  .products{
+    width: 100%;
+    height: 140vh;
+    padding: 25px 0;
+  }
+  
+  .products h1{
+    margin: 35px 0;
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #c72092,#6c14d0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .products .box{
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 25px 0;
+  }
+  </style>
+```
+In your `ProductCard.vue` enter:
+```vue
+<template>
+    <div class="card">
+      <div class="image">
+        <img :src="product.image">
+      </div>
+      <div class="products_text">
+        <h2>{{ product.name }}</h2>
+        <p>
+          {{ product.description }}
+        </p>
+        <h3>{{ product.price }}</h3>
+        <div class="products_star">
+          <i class="fa-solid fa-star" v-for="i in product.stars.full" :key="i"></i>
+          <i class="fa-solid fa-star-half-stroke" v-if="product.stars.half"></i>
+          <i class="fa-regular fa-star" v-for="i in product.stars.empty" :key="i"></i>
+        </div>
+        <a href="#" class="btn">Add To Cart</a>
+      </div>
+    </div>
+  </template>
+  
+  <script>
+  export default {
+    props: {
+      product: {
+        type: Object,
+        required: true,
+      },
+    },
+  };
+  </script>
+  
+  <style scoped>
+  .card {
+    width: 290px;
+    height: 440px;
+    box-shadow: 0 0 8px #6c14d0;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px 20px;
+    background: #f6f6f6;
+  }
+  
+  .card .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card .image img {
+    width: 150px;
+    margin: 15px 0;
+    transition: 0.3s;
+  }
+  
+  .card .products_text h2 {
+    font-size: 30px;
+    margin-top: 15px;
+  }
+  
+  .card .products_text p {
+    color: #91919191;
+    line-height: 21px;
+    margin: 8px 0;
+  }
+  
+  .card .products_text h3 {
+    margin: 7px 0;
+  }
+  
+  .card .products_text .products_star {
+    color: orange;
+    margin-bottom: 19px;
+    cursor: pointer;
+  }
+  
+  .card .products_text .btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    background: linear-gradient(to right, #c72092 , #6c14d0);
+    color: white;
+  }
+  </style>
+```
 
+Lets break this down: 
 
+**in `NewArival.vue` we define a `data()`**: In Vue.js, the `data()` function is a special function used in components to define and initialize the data properties used within that component. It is a key part of the Vue instance and plays a crucial role in managing the component's data. We set a prop `products` equal to an array of Product objects each containing attributes such as name and description. We give each a unique  `id` so that we can differentiate each one when it comes to looping through them
 
+**in `NewArival.vue` we do `v-for`**: The v-for directive is a powerful feature in Vue.js that allows you to iterate over a collection or an array of items and render a template or component for each item. It provides a convenient way to generate repetitive content dynamically. No more re-writing the same content over and over like we had to in the static site! 🔥
 
+**in `NewArival.vue` we do :product="product"`**: This is how we pass the product data to the ProductCard component as a prop. The :product syntax (or v-bind:product) is used to bind the product variable to the product prop of the ProductCard component. By passing the product as a prop, we make the data accessible within the ProductCard component and can use it to display information specific to each product.
 
+then in `ProductCard.vue` we accept the incoming data being passed in from `NewArival.vue` with 
 
+```vue
+    props: {
+      product: {
+        type: Object,
+        required: true,
+      },
+```
 
-
-
+we can now use that incoming data within `ProductCard` like `<h2>{{ product.name }}</h2>`
 
 
 
