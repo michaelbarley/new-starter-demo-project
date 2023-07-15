@@ -643,6 +643,7 @@ then in `ProductCard.vue` we accept the incoming data being passed in from `NewA
 
 we can now use that incoming data within `ProductCard` like `<h2>{{ product.name }}</h2>`
 
+If we take a look at the result in the browser we should now see: 
 
-
+<img width="1319" alt="Screenshot 2023-07-15 at 18 41 54" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/ba5630e4-37f8-4a8e-91de-3f9caaade5c5">
 
