@@ -1,6 +1,4 @@
 # 👋🏻 Hi, hello and welcome to the team!
-![image](https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/d2b1d5d4-cbc1-4d8b-8671-4abe42e71f30)
-
 ## Introduction
 Becoming a software engineer can be overwhelming! You will hear so many different languages and frameworks being mentioned that you may think, what on earth have I signed myself up for. 
 
