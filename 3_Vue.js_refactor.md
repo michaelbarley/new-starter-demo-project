@@ -1038,9 +1038,143 @@ In your ReviewCard.vue, enter:
   </style>
 ```
 
-This is a similar setup to `NewArival` and `Product` there are no new concepts to learn hear 🚀
+This is a similar setup to `NewArival` and `Product` there are no new concepts to learn here 🚀
 
 If we check this out in the browser now we should see: 
 
 <img width="1685" alt="Screenshot 2023-07-15 at 19 14 34" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/3343fc07-a0cb-4d7a-8d4b-b9beb2f764bd">
+
+## Services.vue
+In your Services.vue, enter:
+```vue
+<template>
+    <div class="services">
+      <h1>Our Services</h1>
+      <div class="services-cards">
+        <ServiceCard v-for="service in services" :key="service.id" :service="service" />
+      </div>
+    </div>
+  </template>
+  
+  <script>
+  import ServiceCard from './ServiceCard.vue';
+  
+  export default {
+    name: 'Service',
+    components: {
+      ServiceCard
+    },
+    data() {
+      return {
+        services: [
+          {
+            id: 1,
+            title: 'Service 1',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            icon: 'fa-cog'
+          },
+          {
+            id: 2,
+            title: 'Service 2',
+            description: 'Vivamus et massa dictum, interdum nibh at, efficitur odio.',
+            icon: 'fa-wrench'
+          }
+        ]
+      };
+    }
+  }
+  </script>
+  
+  <style>
+  .services {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 80px 0 10px 0;
+  }
+  
+  .services h1 {
+    font-size: 60px;
+    text-transform: uppercase;
+    background: linear-gradient(to left, #c72092, #6c14d0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .services .services-cards {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    top: 50px;
+  }
+  </style>
+```
+
+In your ServiceCard.vue, enter:
+```vue
+<template>
+    <div class="service-card">
+      <i class="service-icon" :class="iconClass"></i>
+      <h3>{{ service.title }}</h3>
+      <p>{{ service.description }}</p>
+    </div>
+  </template>
+  
+  <script>
+  export default {
+    name: 'ServiceCard',
+    props: ['service'],
+    computed: {
+      iconClass() {
+        return 'fas fa-' + this.service.icon;
+      }
+    }
+  }
+  </script>
+  
+  <style>
+  .service-card {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .service-card .service-icon {
+    font-size: 60px;
+    color: orange;
+    margin: 20px 0;
+    cursor: pointer;
+  }
+  
+  .service-card h3 {
+    margin-bottom: 12px;
+    font-size: 19px;
+  }
+  
+  .service-card p {
+    text-align: center;
+    color: #919191;
+    margin-bottom: 60px;
+  }
+  </style>
+```
+
+Let's explain the new stuff: 
+
+**Computed**: In our application, we have a list of services displayed on the Services page. Each service has an icon associated with it. We want to dynamically generate the CSS class for each icon based on the icon property of the service object.
+
+To achieve this, we can use a computed property. Think of a computed property as a helper that automatically calculates and provides us with the appropriate icon class whenever we need it.
+
+So, we define a computed property called iconClass in the ServiceCard.vue component. Inside the iconClass computed property, we write a function that determines the icon class based on the icon property of the service.
+
+For example, if the icon property is set to "shopping-cart", the iconClass computed property will return the CSS class name "fas fa-shopping-cart". If the icon property is `"heart"`, the computed property will return `"fas fa-heart"`.
+
+We can then use this computed property in the template of ServiceCard.vue. Instead of hardcoding the CSS class for the icon, we simply use iconClass in the template. Vue will automatically calculate the appropriate icon class based on the icon property of the service.
+
+This way, we can easily change the icon for each service by updating the icon property, and the computed property will take care of generating the correct CSS class for us. It keeps our template clean and allows us to reuse the computed logic throughout the component.
+
+So, in summary, computed properties are like handy helpers that calculate and provide us with derived values based on existing data properties. They help us simplify our code, make it more maintainable, and keep our templates clean by encapsulating the logic for derived values separately.
 
