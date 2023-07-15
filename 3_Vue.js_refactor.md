@@ -124,7 +124,6 @@ Within the src/components directory, create the following files:
 
 **Header.vue**: This file will contain the component for the site's header, including the logo and shopping cart.
 
-
 **Navigation.vue**: This file will contain the component for the navigation links.
 
 **Slider.vue**: This file will contain the component for the image carousel/slider.
@@ -154,6 +153,83 @@ Within the src/components directory, create the following files:
 **Newsletter.vue**: This file will contain the component for the newsletter subscription section of the Footer.
 
 Please ensure each of these files is created with the .vue extension, as this is the standard file extension for Vue.js single-file components.
+
+## App.vue
+`App.vue` serves as the root component of your Vue.js application. It is typically the first component to be loaded and renders all other components within it. In other words, it is the parent component for all other components in your Vue application.
+
+The `App.vue` file is structured into three sections:
+
+**`<template>`**: This section contains the HTML of your component.
+
+**`<script>`**: This section contains the JavaScript logic of your component.
+
+**`<style>`**: This section contains the CSS styles for your component.
+
+This is a typical structure for Vue single-file components.
+
+The `App.vue` file is where you'll include the components we previously identified and defined. It will serve as the "layout" of your application, meaning it provides the structure within which the rest of your components will be loaded and displayed.
+
+Lets update our `App.vue` to include all of our newly created components:
+
+```vue
+<template>
+  <div id="app">
+    <img alt="Vue logo" src="./assets/logo.png">
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  </div>
+</template>
+
+<script>
+import HelloWorld from './components/HelloWorld.vue'
+
+export default {
+  name: 'App',
+  components: {
+    HelloWorld
+  }
+}
+</script>
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    width: 15px;
+}
+
+::-webkit-scrollbar-track{
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.25);
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background: linear-gradient(to top, #c72092 , #6c14d0);
+}
+
+section{
+    width: 100%;
+    height: 100vh;
+    background-image: url(image/bg1.png);
+    background-size: cover;
+    background-position: center;
+}
+</style>
+```
+
+This is a basic structure of the App.vue file. It imports the components and includes them within the <template> section. All the imported components are registered in the components property of the Vue instance. Please note that the actual implementation will depend on the specifics of the site's design and structure.
+
+## Header 
+
 
 
 
