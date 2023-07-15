@@ -1109,6 +1109,7 @@ Let's break that down:
 
 15. Looking at the result in the browser, it should look like:
 <img width="1666" alt="Screenshot 2023-07-14 at 16 24 57" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/47462488-d6f7-461c-9a51-93b0065de8fd">
+<img width="1687" alt="Screenshot 2023-07-15 at 20 05 28" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/5f7155e9-67c6-4a48-b20f-6699211cced2">
 
 
 ### Review Section
@@ -1436,7 +1437,7 @@ Let's break this down:
 `transition: 0.3s;`: The transition property is a shorthand property for transition-property, transition-duration, transition-timing-function, and transition-delay. It allows elements to change values over a specified duration. Here it's set to 0.3s, meaning that any change will transition smoothly over a 300 millisecond period.
 
 18. Looking in the browser, it should now look like:
-<img width="1664" alt="Screenshot 2023-07-14 at 16 40 58" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/0b810c5d-eb0b-4693-9f4e-893e086f4a53">
+<img width="1683" alt="Screenshot 2023-07-15 at 20 05 54" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/553d9d81-b8f2-4b03-a286-734fee7cd6a0">
 
 ### Services Section
 19. In your index.html, outside of your closing review </div>. Enter:
@@ -1529,7 +1530,7 @@ No new topics have been introduced here!
 No new topics have been introduced here!
 
 21. Looking in the browser, it should now look like:
-<img width="1764" alt="Screenshot 2023-07-14 at 16 46 22" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/1035073b-48af-40d6-bd6f-b3c5c702b4c6">
+<img width="1693" alt="Screenshot 2023-07-15 at 20 06 21" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/860a390d-557f-4d37-9d8d-7b7c4ab7b7c3">
 
 ### Login From Section
 22. In your index.html, outside of your closing services </div>. Enter:
@@ -1740,7 +1741,7 @@ Lets breakdown the new concepts introduced:
 
 
 24. Looking in the browser, it should now look like:
-<img width="1658" alt="Screenshot 2023-07-14 at 16 59 31" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/ed579f14-9ba6-4d7d-bcd4-ba06044cf519">
+<img width="1663" alt="Screenshot 2023-07-15 at 20 06 56" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/86577134-4f0a-4460-a557-a8f78ec264b7">
 
 
 ### Footer Section
@@ -1908,13 +1909,11 @@ footer .footer_main .tag .search_bar button{
 This introcues no new concepts 🙌🏻
 
 27. Looking in the browser, it should now look like:
-<img width="1631" alt="Screenshot 2023-07-14 at 17 09 45" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/3a751749-ab38-4d1a-88f1-fc992f76ec8e">
+<img width="1689" alt="Screenshot 2023-07-15 at 20 07 25" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/f829fcb6-f4e4-4670-bc42-b73f207d022a">
+
 
 # Congratulations 🎉🎉🎉🎉🎉
 Congratulations! Your hard work, dedication, and determination have truly paid off. Building a website from scratch is no easy feat, especially when diving deep into the intricacies of HTML and CSS. However, you've not only built a beautifully designed store landing page, but also acquired a deep understanding of each and every concept used to bring this project to life. This accomplishment is a testament to your passion for web development and your commitment to learning. Remember, each line of code you wrote is a step forward on your journey. May this success lead to a greater achievement in the years to come. Keep coding, keep learning, and keep pushing the boundaries of what's possible. Well done!
-
-
-![image](https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/b4b45ae0-2251-485e-b173-59fa912023ef)
 
 # Ready for the next section? 
 [lets go!](https://github.com/michaelbarley/new-starter-demo-project/blob/main/3_Vue.js_refactor.md)
