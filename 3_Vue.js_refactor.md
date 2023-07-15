@@ -451,7 +451,7 @@ In your `Slider.vue`, enter:
 As you can see, we are just chopping up our static HTML and CSS application, seperating the styles accross the components. You can also see here that `Header.vue` is the parent and contains `Navigation.vue` as well as `Slider.vue`. Therfore in `App.vue` when we import `Header.vue` we also see the Navigation and Slider. 
 
 If we run `yarn serve` in the terminal and go to the url it generates you should see in the browser: 
-<img width="1314" alt="Screenshot 2023-07-15 at 18 14 35" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/1b905e5c-db36-42fc-bdc9-bff5892c2f9e">
+<img width="1684" alt="Screenshot 2023-07-15 at 20 13 52" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/9088bc4b-affe-49e6-8d3d-730227917724">
 
 ## NewArival.vue
 In your Header.vue, enter:
@@ -642,7 +642,8 @@ we can now use that incoming data within `ProductCard` like `<h2>{{ product.name
 
 If we take a look at the result in the browser we should now see: 
 
-<img width="1319" alt="Screenshot 2023-07-15 at 18 41 54" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/ba5630e4-37f8-4a8e-91de-3f9caaade5c5">
+<img width="1685" alt="Screenshot 2023-07-15 at 20 14 14" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/361d5abd-e6e3-4cf6-9feb-aba405dac9c1">
+
 
 ## About.vue
 In your About.vue, enter:
@@ -896,7 +897,8 @@ Methods are a fundamental part of Vue.js components and allow you to define cust
 
 If we look in the browser at the result we should now see: 
 
-<img width="1682" alt="Screenshot 2023-07-15 at 19 07 42" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/c83b62ce-5bbd-4de4-9fc4-5b72e214a622">
+<img width="1690" alt="Screenshot 2023-07-15 at 20 14 40" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/834dd218-21a9-452d-aa10-1cf588589d2d">
+
 
 ## Review.vue
 In your Review.vue, enter:
@@ -1032,7 +1034,8 @@ This is a similar setup to `NewArival` and `Product` there are no new concepts t
 
 If we check this out in the browser now we should see: 
 
-<img width="1685" alt="Screenshot 2023-07-15 at 19 14 34" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/3343fc07-a0cb-4d7a-8d4b-b9beb2f764bd">
+<img width="1683" alt="Screenshot 2023-07-15 at 20 14 57" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/24e24f7d-6040-4536-b7da-e646ce735ba3">
+
 
 ## Services.vue
 In your Services.vue, enter:
@@ -1170,7 +1173,8 @@ So, in summary, computed properties are like handy helpers that calculate and pr
 
 If we take a look at the result in our browser we should see: 
 
-<img width="1684" alt="Screenshot 2023-07-15 at 19 23 24" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/0613c6c6-9689-4108-8d74-b418dd88910e">
+<img width="1690" alt="Screenshot 2023-07-15 at 20 15 17" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/23f0dc7a-2ab2-4d5e-9cb1-87c29961180b">
+
 
 ## LoginForm.vue
 In your LoginForm.vue, enter:
@@ -1404,7 +1408,8 @@ This way, Vue.js simplifies form handling by providing a convenient way to bind 
 
 If we now check in our browser we should see: 
 
-<img width="1673" alt="Screenshot 2023-07-15 at 19 32 52" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/e00fda27-62c2-4257-8f96-f49e5cfb55bf">
+<img width="1666" alt="Screenshot 2023-07-15 at 20 15 40" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/729b384d-81fb-4f16-929d-46c221d1d03e">
+
 
 ## Footer.vue
 In your Footer.vue, enter:
@@ -1574,7 +1579,8 @@ No new concepts have been introduced here 🙌🏻
 
 If we check what the result is in our browser we should see:
 
-<img width="1680" alt="Screenshot 2023-07-15 at 19 43 42" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/1613eed7-9b84-48ca-9181-6e35dd86b802">
+<img width="1660" alt="Screenshot 2023-07-15 at 20 15 56" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/636ee27e-d2e2-4207-a017-8706e3b756c4">
+
 
 ## Congratulations
 Well done! you made it through this section. I hope you now understand how breaking our website into small usable components helps us. I also hope you now understand some of the value vue.js brings us. There is alot more to learn in terms of vue.js but throughout this project I have shown you the very basics. We now have a beautiful vue.js application utalising components and data. In the next section we will move that data into a `database` and retrieve it using an `API` which we will build together using the `Laravel` framework
