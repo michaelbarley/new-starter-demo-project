@@ -73,6 +73,8 @@ In the context of our static HTML and CSS website, we can identify the following
 
 **NewArrival**: A component that displays the newly arrived products. This can be useful on e-commerce or retail sites to highlight new products.
 - **ProductCard**: A subcomponent of the NewArrival section. It represents each individual product, encapsulating product details like image, name, and price.
+
+**About**: A component that displays the about section
   
 **Review**: A component showcasing customer reviews. A crucial part of e-commerce and service-oriented sites where customer feedback is displayed.
 - **ReviewCard**: A subcomponent of the Review section. It represents each individual review, encapsulating the reviewer's name, rating, and comments.
@@ -140,6 +142,8 @@ Within the src/components directory, create the following files:
 **NewArrival.vue**: This file will contain the component for displaying newly arrived products.
 
 **ProductCard.vue**: This file will contain the component for each individual product within the NewArrival section.
+
+**About.vue**: This file will contain the component for the about section.
 
 **Review.vue**: This file will contain the component for showcasing customer reviews.
 
