@@ -174,56 +174,47 @@ Lets update our `App.vue` to include all of our newly created components:
 ```vue
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Header />
+    <NewArrival />
+    <Review />
+    <Services />
+    <LoginForm />
+    <Footer />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Header.vue';
+import NewArrival from './components/NewArrival.vue';
+import Review from './components/Review.vue';
+import Services from './components/Services.vue';
+import LoginForm from './components/LoginForm.vue';
+import Footer from './components/Footer.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Header,
+    NewArrival,
+    Review,
+    Services,
+    LoginForm,
+    Footer
   }
 }
 </script>
 
 <style>
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family:Arial, Helvetica, sans-serif
-}
-
-html{
-    scroll-behavior: smooth;
-}
-
-::-webkit-scrollbar{
-    width: 15px;
-}
-
-::-webkit-scrollbar-track{
-    border-radius: 5px;
-    box-shadow: inset 0 0 10px rgba(0,0,0,0.25);
-}
-
-::-webkit-scrollbar-thumb{
-    border-radius: 5px;
-    background: linear-gradient(to top, #c72092 , #6c14d0);
-}
-
-section{
-    width: 100%;
-    height: 100vh;
-    background-image: url(image/bg1.png);
-    background-size: cover;
-    background-position: center;
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
 }
 </style>
+
 ```
 
 This is a basic structure of the App.vue file. It imports the components and includes them within the <template> section. All the imported components are registered in the components property of the Vue instance. Please note that the actual implementation will depend on the specifics of the site's design and structure.
