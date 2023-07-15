@@ -147,14 +147,6 @@ Within the src/components directory, create the following files:
 
 **Footer.vue**: This file will contain the component for the footer of the page.
 
-**Contact.vue**: This file will contain the component for the contact information section of the Footer.
-
-**GetHelp.vue**: This file will contain the component for the help-related links section of the Footer.
-
-**OurStores.vue**: This file will contain the component for the store locations section of the Footer.
-
-**Newsletter.vue**: This file will contain the component for the newsletter subscription section of the Footer.
-
 Please ensure each of these files is created with the .vue extension, as this is the standard file extension for Vue.js single-file components.
 
 ## App.vue
