@@ -114,15 +114,9 @@ vue create shoes-frontend
 
 In the newly created project folder, copy the `image` folder from the Static HTML and CSS project and place it within shoes-frontend/public
 
-<img width="244" alt="Screenshot 2023-07-15 at 17 54 30" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/5e915ddc-f93f-4cd8-bf06-85e05fe56c17">
-
-In the setup it will ask you which version of vue do you want, Select vue 2. if you `cd` into the project directory and run `yarn serve` you will be prompted wih a url, if you visit the URL in the browser you should see: 
-
-<img width="1308" alt="Screenshot 2023-07-15 at 15 02 03" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/a00a7916-5969-48fe-b818-283f1115800a">
+In the setup it will ask you which version of vue do you want, Select vue 2. if you `cd` into the project directory and run `yarn serve` you will be prompted wih a url
 
 Move `bg1.png` into `shoes-frontend/src/assets`
-
-<img width="250" alt="Screenshot 2023-07-15 at 18 00 55" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/8d853369-ef81-424f-ae9c-12e5d2ee0dd2">
 
 ## Creating our components 
 open up `shoes-frontend` in your code editor 
