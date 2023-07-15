@@ -907,3 +907,140 @@ Methods are a fundamental part of Vue.js components and allow you to define cust
 If we look in the browser at the result we should now see: 
 
 <img width="1682" alt="Screenshot 2023-07-15 at 19 07 42" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/c83b62ce-5bbd-4de4-9fc4-5b72e214a622">
+
+## Review.vue
+In your Review.vue, enter:
+```vue
+<template>
+  <div class="reviews">
+    <h1>Reviews</h1>
+    <div class="review-list">
+      <ReviewCard v-for="review in reviews" :key="review.id" :review="review" />
+    </div>
+  </div>
+</template>
+
+<script>
+import ReviewCard from './ReviewCard.vue';
+
+export default {
+  name: 'Review',
+  components: {
+    ReviewCard
+  },
+  data() {
+    return {
+      reviews: [
+        {
+          id: 1,
+          title: 'Great Product',
+          content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+          rating: [1, 1, 1, 1, 0.5]
+        },
+        {
+          id: 2,
+          title: 'Excellent Quality',
+          content: 'Vivamus et massa dictum, interdum nibh at, efficitur odio.',
+          rating: [1, 1, 1, 1, 1]
+        }
+      ]
+    };
+  }
+}
+</script>
+
+<style>
+/* Styles for the reviews component */
+.reviews {
+  width: 100%;
+  height: 100vh;
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+}
+
+.reviews h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #c72092, #6c14d0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.review-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  align-items: flex-start;
+}
+</style>
+```
+
+In your ReviewCard.vue, enter:
+```vue
+<template>
+    <div class="review-card">
+      <h2>{{ review.title }}</h2>
+      <p>{{ review.content }}</p>
+      <div class="rating">
+        <span v-for="star in review.rating" :key="star" class="star"></span>
+      </div>
+    </div>
+  </template>
+  
+  <script>
+  export default {
+    name: 'ReviewCard',
+    props: ['review']
+  }
+  </script>
+  
+  <style>
+  .review-card {
+    width: 500px;
+    background: #f3f1f1;
+    padding: 20px 25px;
+    border-radius: 5px;
+    margin: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .review-card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .review-card p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  .review-card .rating {
+    color: orange;
+    margin-bottom: 10px;
+  }
+  
+  .review-card .star {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: orange;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+  </style>
+```
+
+This is a similar setup to `NewArival` and `Product` there are no new concepts to learn hear 🚀
+
+If we check this out in the browser now we should see: 
+
+<img width="1685" alt="Screenshot 2023-07-15 at 19 14 34" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/3343fc07-a0cb-4d7a-8d4b-b9beb2f764bd">
+
