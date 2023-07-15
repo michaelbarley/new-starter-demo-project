@@ -177,6 +177,7 @@ Lets update our `App.vue` to include all of our newly created components:
   <div id="app">
     <Header />
     <NewArrival />
+    <About />
     <Review />
     <Services />
     <LoginForm />
@@ -187,6 +188,7 @@ Lets update our `App.vue` to include all of our newly created components:
 <script>
 import Header from './components/Header.vue';
 import NewArrival from './components/NewArrival.vue';
+import Review from './components/About.vue';
 import Review from './components/Review.vue';
 import Services from './components/Services.vue';
 import LoginForm from './components/LoginForm.vue';
@@ -197,6 +199,7 @@ export default {
   components: {
     Header,
     NewArrival,
+    About,
     Review,
     Services,
     LoginForm,
@@ -651,3 +654,5 @@ If we take a look at the result in the browser we should now see:
 
 <img width="1319" alt="Screenshot 2023-07-15 at 18 41 54" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/ba5630e4-37f8-4a8e-91de-3f9caaade5c5">
 
+## About.vue
+In your About.vue, enter:
