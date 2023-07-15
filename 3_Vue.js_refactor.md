@@ -69,8 +69,7 @@ In the context of our static HTML and CSS website, we can identify the following
 
 **Header**: The topmost part of the site, containing the site's logo and the shopping cart. It's a component you're likely to use on every page of your site.
 - **Navigation**: A subcomponent of the Header. This encapsulates the navigation links, allowing users to move between different sections or pages of the site.
-  
-**Slider**: An image carousel/slider component, often found in the Hero section of a site. This component can showcase multiple images or banners in a rotating fashion.
+- **Slider**: An image carousel/slider component, often found in the Hero section of a site. This component can showcase multiple images or banners in a rotating fashion.
 
 **NewArrival**: A component that displays the newly arrived products. This can be useful on e-commerce or retail sites to highlight new products.
 - **ProductCard**: A subcomponent of the NewArrival section. It represents each individual product, encapsulating product details like image, name, and price.
