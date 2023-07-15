@@ -114,8 +114,17 @@ vue --version
 vue create shoes-frontend
 ```
 
+In the newly created project folder, copy the `image` folder from the Static HTML and CSS project and place it within shoes-frontend/public
+
+<img width="244" alt="Screenshot 2023-07-15 at 17 54 30" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/5e915ddc-f93f-4cd8-bf06-85e05fe56c17">
+
 In the setup it will ask you which version of vue do you want, Select vue 2. if you `cd` into the project directory and run `yarn serve` you will be prompted wih a url, if you visit the URL in the browser you should see: 
+
 <img width="1308" alt="Screenshot 2023-07-15 at 15 02 03" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/a00a7916-5969-48fe-b818-283f1115800a">
+
+Move `bg1.png` into `shoes-frontend/src/assets`
+
+<img width="250" alt="Screenshot 2023-07-15 at 18 00 55" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/8d853369-ef81-424f-ae9c-12e5d2ee0dd2">
 
 ## Creating our components 
 open up `shoes-frontend` in your code editor 
@@ -156,18 +165,6 @@ Please ensure each of these files is created with the .vue extension, as this is
 
 ## App.vue
 `App.vue` serves as the root component of your Vue.js application. It is typically the first component to be loaded and renders all other components within it. In other words, it is the parent component for all other components in your Vue application.
-
-The `App.vue` file is structured into three sections:
-
-**`<template>`**: This section contains the HTML of your component.
-
-**`<script>`**: This section contains the JavaScript logic of your component.
-
-**`<style>`**: This section contains the CSS styles for your component.
-
-This is a typical structure for Vue single-file components.
-
-The `App.vue` file is where you'll include the components we previously identified and defined. It will serve as the "layout" of your application, meaning it provides the structure within which the rest of your components will be loaded and displayed.
 
 Lets update our `App.vue` to include all of our newly created components:
 
@@ -217,11 +214,253 @@ export default {
 
 ```
 
-This is a basic structure of the App.vue file. It imports the components and includes them within the <template> section. All the imported components are registered in the components property of the Vue instance. Please note that the actual implementation will depend on the specifics of the site's design and structure.
+let's break this down piece by piece.
 
-Regarding the `<style>` section in the App.vue file, it includes some CSS that will be applied globally across your application. Global styles are styles that are not scoped to a particular component, but instead apply to all elements throughout your application.
+Vue Component Structure: 
+A Vue component file usually consists of three parts: `<template>`, `<script>` and `<style>`.
 
-## Header 
+**`<template>`** is where you write the HTML that this component will render.
+
+**`<script>`** is where you write the JavaScript that controls the behavior of this component.
+
+**`<style>`** is where you write the CSS that styles your component.
+  
+**`<template>`** section: The template in App.vue specifies what will be displayed when this component is used. In this case, it is a `<div>` element with an id of app, containing a series of other components: Header, NewArrival, Review, Services, LoginForm, and Footer. These components represent different sections of your application.
+
+**`<script>`** section: The script part of App.vue does two main things:
+- First, it imports the necessary components from their respective files using import statements. This makes the components available to be used within this file.
+  
+- Second, it exports a JavaScript object which configures the Vue component. The name field assigns a name to this component, and the components field registers the imported components so they can be used in the template.
+  
+**`<style>` section**: The style section provides CSS for the App component.
+Styles defined here are global by default, meaning they can apply to HTML across your whole app.
+In the example, the CSS rules are applied to the `#app` id, affecting the text font, color, and other styling properties within the div element with the app id.
+
+**Vue Component Naming**: Components in Vue.js are given in PascalCase by convention, but when used in the DOM they should be in kebab-case. For example, NewArrival in JavaScript becomes `<new-arrival>` in HTML.
+
+**Scoped and Global CSS**: CSS in Vue components is global by default, but you can make it apply only to the current component by adding the scoped attribute to the style tag (<style scoped>). The CSS rules within a scoped style tag won't leak out to other components, making it easier to avoid unintended side effects.
+
+The `App.vue` file is a central piece of your application. It imports and integrates the other components to form the complete web application. Understanding its structure and purpose is key to mastering Vue.js development
+
+## Header.vue
+In your Header.vue, enter:
+
+```vue
+<template>
+    <section>
+      <Navigation />
+      <Slider />
+    </section>
+  </template>
+  
+  <script>
+  import Navigation from './Navigation.vue';
+  import Slider from './Slider.vue';
+  
+  export default {
+    name: 'Header',
+    components: {
+      Navigation,
+      Slider
+    }
+  }
+  </script>
+  
+  <style scoped>
+  /* As there are no shared styles, this section can be left empty */
+  </style>
+```
+
+In your `Navigation.vue`, enter:
+```vue
+<template>
+    <nav>
+      <div class="logo">
+        <h1>Shoe<span>s</span></h1>
+      </div>
+      <ul>
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#Products">Products</a></li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#Review">Review</a></li>
+        <li><a href="#Services">Services</a></li>
+      </ul>
+    </nav>
+  </template>
+  
+  <script>
+  export default {
+    name: 'Navigation',
+  }
+  </script>
+  
+  <style scoped>
+  nav{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      box-shadow: 0 0 8px rgba(0,0,0,0.6);
+      background: white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+  }
+  
+  nav .logo{
+      font-size: 35px;
+      color: #c72092;
+      margin: 5px 0;
+      cursor: pointer;
+      position: relative;
+      left: -4%;
+  }
+  
+  nav .logo span{
+      color: #6c14d0;
+      text-decoration: underline;
+  }
+  
+  nav ul{
+      list-style: none;
+  }
+  
+  nav ul li{
+      display: inline-block;
+      margin: 5px 15px;
+  }
+  
+  nav ul li a{
+      text-decoration: none;
+      color: black;
+      transition: 0.2s;
+  }
+  
+  nav ul li a:hover{
+      color: #c72092;
+  }
+  
+  nav .icons i{
+      margin: 0 4px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: 0.3s;
+  }
+  
+  nav .icons i:hover{
+      color: #c72092;
+  }
+  </style>
+```
+
+In your `Slider.vue`, enter:
+```vue
+<template>
+    <div class="main" id="Home">
+      <div class="main_content">
+        <div class="main_text">
+          <h1>NIKE<br><span>Collection</span></h1>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+            been the industry's standard dummy text ever since the 1500s, when an unknown printer took
+            a galley of type and scrambled it to make a type specimen book. It has survived not only
+            five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+          </p>
+        </div>
+        <div class="main_image">
+          <img src="image/shoes.png">
+        </div>
+      </div>
+      <div class="button">
+        <a href="#">SHOP NOW</a>
+      </div>
+    </div>
+  </template>
+  
+  <script>
+  export default {
+    name: 'Slider',
+  }
+  </script>
+  
+  <style scoped>
+  .main .main_content {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+  }
+  
+  .main .main_content .main_text h1{
+      font-size: 90px;
+      line-height: 70px;
+      font-family: pyxidium quick;
+      background: linear-gradient(to right, #c72092,#6c14d0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      position: relative;
+      top: 45px;
+      left: 5%;
+  }
+  
+  .main .main_content .main_text h1 span{
+      font-size: 70px;
+      background: linear-gradient(to right, #c72092,#6c14d0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+  }
+  
+  .main .main_content .main_text p{
+      width: 600px;
+      text-align: justify;
+      line-height: 21px;
+      position: relative;
+      top: 85px;
+      left: 5%;
+  }
+  
+  .main .main_content .main_image img{
+      width: 650px;
+      position: relative;
+      left: 20px;
+      top: 75px;
+  }
+  
+  .main .button{
+      position: absolute;
+      left: 6%;
+      padding: 10px 20px;
+      border-radius: 30px;
+      background: linear-gradient(to right,#c72092 , #6c14d0);
+  }
+  
+  .main .button a{
+      color: white;
+      text-decoration: none;
+  }
+  
+  .main .button i{
+      color: white;
+      margin-left: 5px;
+      transition: 0.3s;
+  }
+  
+  .main .button:hover i{
+      transform: translateX(6px);
+  }
+  </style>
+```
+
+As you can see, we are just chopping up our static HTML and CSS application, seperating the styles accross the components. You can also see here that `Header.vue` is the parent and contains `Navigation.vue` as well as `Slider.vue`. Therfore in `App.vue` when we import `Header.vue` we also see the Navigation and Slider. 
+
+If we run `yarn serve` in the terminal and go to the url it generates you should see in the browser: 
+<img width="1314" alt="Screenshot 2023-07-15 at 18 14 35" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/1b905e5c-db36-42fc-bdc9-bff5892c2f9e">
+
+
+
+
+
+
 
 
 
