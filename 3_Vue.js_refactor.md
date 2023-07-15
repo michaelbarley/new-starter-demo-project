@@ -90,4 +90,26 @@ In the context of our static HTML and CSS website, we can identify the following
   
 By breaking down our static HTML site into these reusable components, we ensure that each piece of functionality is encapsulated, maintainable, and easy to manage. If we need to change the appearance or functionality of one of these components, we only have to make the change in one place. This approach promotes consistency across the site, reduces the likelihood of errors, and makes the code easier to understand and work with.
 
+## Installation / Setting up a vue project 
+<blockquote>
+Node Version Requirement
 
+Vue CLI 4.x requires Node.js version 8.9 or above (v10+ recommended). 
+</blockquote>
+
+#### To install Vue CLI: 
+
+```bash
+npm install -g @vue/cli
+```
+
+#### To verify installation 
+
+```bash
+vue --version
+```
+
+#### To create new project
+```bash
+vue create shoes-frontend
+```
