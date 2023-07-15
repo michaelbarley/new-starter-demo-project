@@ -113,3 +113,12 @@ vue --version
 ```bash
 vue create shoes-frontend
 ```
+
+In the setup it will ask you which version of vue do you want, Select vue 2. if you `cd` into the project directory and run `yarn serve` you will be prompted wih a url, if you visit the URL in the browser you should see: 
+<img width="704" alt="Screenshot 2023-07-15 at 15 00 39" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/0aa18f9b-e4df-42f1-b41b-9c637a65d3da">
+<img width="710" alt="Screenshot 2023-07-15 at 15 01 06" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/e817ed70-6e56-4007-934b-5a54bb20bd63">
+<img width="1308" alt="Screenshot 2023-07-15 at 15 02 03" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/a00a7916-5969-48fe-b818-283f1115800a">
+
+
+
+
