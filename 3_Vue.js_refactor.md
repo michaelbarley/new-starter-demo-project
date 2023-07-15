@@ -656,3 +656,254 @@ If we take a look at the result in the browser we should now see:
 
 ## About.vue
 In your About.vue, enter:
+```vue
+<template>
+    <div class="about" id="About">
+        <h1>Web<span>About</span></h1>
+
+        <div class="about-main">
+            <div class="about-image">
+                <div class="about-small-image">
+                    <img v-for="image in images" :src="image.src" @click="updateMainImage(image.src)" :key="image.id">
+                </div>
+
+                <div class="image-container">
+                    <img :src="selectedImage || defaultImage" id="imagebox">
+                </div>
+            </div>
+
+            <div class="about-text">
+                <p>
+                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
+                    Latin
+                    literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                    Hampden-Sydney
+                    College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum
+                    passage,
+                    and going through the cites of the word in classical literature, discovered the undoubtable source.
+                    Lorem
+                    Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good
+                    and
+                    Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during
+                    the
+                    Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section
+                    1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those
+                    interested.
+                    Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their
+                    exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                </p>
+            </div>
+        </div>
+
+        <a href="#" class="about-btn">Shop Now</a>
+    </div>
+</template>
+  
+<script>
+export default {
+    name: 'About',
+    data() {
+        return {
+            selectedImage: '',
+            images: [
+                { id: 1, src: 'image/red_shoes1.png' },
+                { id: 2, src: 'image/red_shoes2.png' },
+                { id: 3, src: 'image/red_shoes3.png' },
+                { id: 4, src: 'image/red_shoes4.png' }
+            ],
+            defaultImage: 'image/red_shoes1.png'
+        };
+    },
+    methods: {
+        updateMainImage(src) {
+            this.selectedImage = src;
+        }
+    }
+}
+</script>
+  
+<style>
+.about {
+    width: 100%;
+    height: 100vh;
+    padding: 35px 0;
+}
+
+.about h1 {
+    font-size: 60px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+}
+
+.about h1 span {
+    background: linear-gradient(to right, #c72092, #6c14d0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 15px;
+}
+
+.about-main {
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about-image {
+    display: flex;
+    margin-top: 50px;
+}
+
+.about-image .about-small-image {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 15px;
+}
+
+.about-image .about-small-image img {
+    height: 92px;
+    margin: 5px 0;
+    cursor: pointer;
+    background: linear-gradient(to right, #6c14d0, #c72092);
+    display: block;
+    border-radius: 6px;
+    padding: 5px 5px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.about-image .about-small-image img:hover {
+    opacity: 1;
+}
+
+.about-image .image-container {
+    padding: 10px;
+    display: flex;
+}
+
+.about-image .image-container img {
+    border: 3px solid #6c14d0;
+    border-radius: 20px;
+    height: 430px;
+    padding: 30px;
+    box-shadow: 0 0 8px #6c14d0;
+}
+
+.about-text {
+    margin-top: 45px;
+}
+
+.about-text p {
+    background: linear-gradient(to left, #c72092, #6c14d0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 22px;
+    width: 600px;
+    text-align: justify;
+    padding: 25px 30px;
+    border: 2px solid #c72092;
+    border-radius: 20px;
+    box-shadow: 0 0 8px #c72092;
+}
+
+.about-btn {
+    color: black;
+    background: none;
+    position: relative;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 25px;
+    border: 2px solid #c72092;
+    text-decoration: none;
+    box-shadow: 0 0 8px #c72092;
+    transition: 0.5s;
+}
+
+.about-btn:hover {
+    border: 2px solid transparent;
+    background: #c72092;
+    color: white;
+}</style>
+```
+
+Let's break down the new stuff: 
+
+In Vue.js, methods are functions that are defined within a Vue component and can be called to perform certain actions or operations. They provide a way to define custom behavior and logic within the component.
+
+Methods in Vue.js are typically defined within the methods property of the component's options object. Here's an example:
+
+```vue
+<script>
+export default {
+  name: 'MyComponent',
+  data() {
+    return {
+      message: 'Hello, Vue!'
+    };
+  },
+  methods: {
+    greet() {
+      console.log(this.message);
+    }
+  }
+}
+</script>
+```
+
+In this example, we have a component named MyComponent with a data property containing a message variable. The methods property defines a greet method that logs the value of this.message to the console.
+
+Methods can be invoked from within the component's template or from other methods using the this keyword. Here's how you can call the greet method from the template:
+
+```vue
+<template>
+  <div>
+    <button @click="greet">Greet</button>
+  </div>
+</template>
+```
+
+When the button is clicked, the greet method will be executed, and the message will be logged to the console.
+
+Methods can also accept parameters if needed. You can pass data from the template or other methods as arguments to a method:
+
+```vue
+<script>
+export default {
+  name: 'MyComponent',
+  methods: {
+    sayHello(name) {
+      console.log(`Hello, ${name}!`);
+    }
+  }
+}
+</script>
+```
+Then, you can call the sayHello method with an argument from the template:
+
+```vue
+<template>
+  <div>
+    <button @click="sayHello('John')">Say Hello</button>
+  </div>
+</template>
+```
+
+In this case, clicking the button will invoke the sayHello method with the argument 'John', resulting in the message "Hello, John!" being logged to the console.
+
+Methods are a fundamental part of Vue.js components and allow you to define custom behavior, handle events, perform computations, make API calls, and more. They provide the flexibility to add interactivity and dynamic functionality to your Vue applications.
+
+If we look in the browser at the result we should now see: 
+
+<img width="1682" alt="Screenshot 2023-07-15 at 19 07 42" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/c83b62ce-5bbd-4de4-9fc4-5b72e214a622">
