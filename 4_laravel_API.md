@@ -273,6 +273,10 @@ We can run all migrations by using the command:
 ```bash
 php artisan migrate
 ```
+If we now refresh our database we should see laravel has added our `Products` table
 
+<img width="1180" alt="Screenshot 2023-07-16 at 12 50 10" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/870fb628-07b2-4525-ba93-4d0d25e12ddc">
 
+Lets manually enter our products into the database
+<img width="1196" alt="Screenshot 2023-07-16 at 12 53 15" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/174b5bbe-ea07-49b7-a04a-3f6bfe695f0c">
 
