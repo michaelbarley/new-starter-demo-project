@@ -105,3 +105,60 @@ As your application grows, the Laravel API allows you to scale and extend your s
 The Laravel API provides a robust framework for implementing authentication and security measures. You can enforce authentication mechanisms such as token-based authentication, OAuth, or JWT (JSON Web Tokens) to ensure that only authorized users can access certain data or perform specific actions. This helps protect sensitive information, maintain data privacy, and control access to your application's resources.
 
 In summary, building a Laravel API for your Vue.js application allows for seamless data retrieval and manipulation, language agnosticism, consistent data format (JSON), separation of concerns, scalability, extensibility, and security measures. The API acts as an intermediary between your Vue.js application and the server-side database, enabling efficient communication and data exchange. By leveraging the Laravel API, you can create a robust and feature-rich application while keeping your codebase organized, maintainable, and secure.
+
+## Requirments
+Before you begin programming your Laravel backend, there are several requirements that need to be set up. Here's a list of the requirements and how to install them using Homebrew:
+
+**Homebrew**:
+Homebrew is a package manager for macOS that allows you to easily install and manage software packages. If you don't have Homebrew installed, you can install it by opening Terminal and running the following command:
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+**PHP**:
+Laravel is built using PHP, so you'll need to install PHP on your system. With Homebrew, you can install PHP by running the following command in Terminal:
+
+```bash
+brew install php
+```
+
+This will install the latest version of PHP available through Homebrew.
+
+**Composer**:
+Composer is a dependency management tool for PHP that is used to manage Laravel and its dependencies. You can install Composer by running the following command in Terminal:
+
+``bash
+brew install composer
+```
+
+This will install Composer globally on your system, allowing you to use it from anywhere.
+
+**MySQL**:
+MySQL is a popular relational database management system that is commonly used with Laravel. To install MySQL using Homebrew, run the following command:
+
+```bash
+brew install mysql
+```
+
+After installing MySQL, you may need to set up a root password and start the MySQL service. Follow the instructions provided in the Terminal after the installation is complete.
+
+**Laravel Installer**:
+The Laravel Installer is a command-line tool that helps in setting up new Laravel projects quickly. You can install it globally using Composer by running the following command:
+
+```bash
+composer global require laravel/installer
+```
+
+This will make the Laravel Installer available as a global command on your system.
+
+Once you have installed all these requirements, you should have PHP, Composer, MySQL, and the Laravel Installer set up on your system. You are then ready to start programming your Laravel backend.
+
+## Creating The Project
+in the terminal, within `documents` run this command: 
+
+```bash
+laravel new shoes-api
+```
+
+This will create you a new laravel project with all the boilerplate code already written for us!
