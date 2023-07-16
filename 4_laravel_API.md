@@ -81,6 +81,27 @@ Databases offer security features to protect your data from unauthorized access.
 **Data Analysis and Reporting**:
 Databases can support advanced data analysis and reporting capabilities. By storing data in a structured format, you can leverage query tools, reporting frameworks, or business intelligence solutions to gain insights from your e-commerce data. This helps in making informed decisions, identifying trends, and optimizing business processes.
 
+
+
+
+__
+**Artisan**: 
+Artisan is the command-line interface (CLI) included with Laravel, a popular PHP framework. It provides a set of helpful commands to assist with various development tasks, such as generating code, managing database migrations, running tests, and more.
+
+Here are some key points about Artisan:
+
+- Code Generation: Artisan allows you to generate boilerplate code for various components of your Laravel application, including controllers, models, migrations, commands, and more. This helps speed up the development process by providing a consistent structure and reducing the need for manual coding.
+  
+- Database Migrations: Artisan simplifies the management of database migrations in Laravel. Migrations are version control for your database schema, allowing you to create, modify, and roll back changes to the database structure. With Artisan commands, you can create migration files, run migrations to update the database, roll back migrations, and more.
+  
+- Task Automation: Artisan supports task automation through custom commands. You can create your own Artisan commands to automate repetitive tasks, schedule tasks to run at specific intervals using cron, and build command-line utilities specific to your application's requirements.
+  
+- Built-in Commands: Laravel ships with a wide range of pre-built Artisan commands. These commands cover a variety of tasks, such as running tests, clearing cache, optimizing the application, generating documentation, managing queues, and interacting with the application during development.
+  
+- CLI Testing: Artisan provides a testing environment within the command-line interface. This allows you to write and run tests for your application's functionality, ensuring that everything works as expected. Artisan's testing features make it easier to write and execute tests for commands, models, controllers, and other parts of your application.
+  
+- Extensibility: Artisan is designed to be extensible. You can create custom commands and add them to your application to perform specific tasks or integrate with external tools. This extensibility allows you to tailor Artisan to your project's unique requirements and automate any custom development workflows.
+
 In summary, databases provide a reliable and efficient way to store and manage your e-commerce data. They offer persistent storage, scalability, structured organization, powerful querying, data consistency, security, and analysis capabilities. By transitioning from storing products as arrays in your Vue.js project to utilizing a database, you can improve data management, enhance scalability, and enable more advanced features and functionalities in your application.
 
 ## APIs
@@ -250,6 +271,12 @@ Let's break that down:
 
 By running the migration, Laravel will create the "products" table with the specified columns in your database.
 
+## Running Our Migration
+We can run all migrations by using the command: 
+
+```bash
+php artisan migrate
+```
 
 
 
