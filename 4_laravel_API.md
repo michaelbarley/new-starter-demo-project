@@ -1,4 +1,4 @@
-# Laravel_API
+# Laravel API
 By the end of this section you will have a Laravel API communicating with our Vue.js application to retrieve data for Products
 
 ## Server Side
