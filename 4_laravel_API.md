@@ -772,5 +772,11 @@ if we look at this in the browser we should see:
 
 <img width="1425" alt="Screenshot 2023-07-16 at 13 42 55" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/f4446d08-5ff0-48b4-a3ab-6b710588727d">
 
+# Congratulations
+
+Well done! you made it through this section. We now have our Vue.js application communicating with our very own API. The data is persistant and we can easily add and remove products!
+
+
+
 
 
