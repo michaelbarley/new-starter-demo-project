@@ -544,3 +544,233 @@ This will start a local server where our api can be accessed from. You should se
 going to that url you will see the applicaiton, if you add `/api/proucts` you should see: 
 
 <img width="1015" alt="Screenshot 2023-07-16 at 13 19 09" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/1cf34983-0cf1-4090-8460-768187e3ac8b">
+
+## Updating our Vue.js Application To Retrieve Products From Our API
+Keeping our API running in the background, if we load up our `shoes-frontend` project and go into the `NewArival.vue` component. You will see currently that it's getting the Products from a static array of objects we manually defined:
+
+```vue
+    data() {
+      return {
+        products: [
+          {
+            id: 1,
+            image: "image/shoes1.png",
+            name: "NIKE",
+            description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+            price: "$100.99",
+            stars: {
+              full: 5,
+              half: 0,
+              empty: 0
+            }
+          },
+          {
+            id: 2,
+            image: "image/shoes2.png",
+            name: "NIKE",
+            description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+            price: "$110.99",
+            stars: {
+              full: 5,
+              half: 0,
+              empty: 0
+            }
+          },
+        ]
+      }
+    }
+```
+
+But now that we have a API that GETS the products from a database we should modify this!
+
+Modify NewArrival.vue to be: 
+
+```vue
+<template>
+  <div class="products" id="Products">
+    <h1>Products</h1>
+    <div class="box">
+      <ProductCard v-for="product in products" :key="product.id" :product="product" />
+    </div>
+  </div>
+</template>
+
+<script>
+import ProductCard from './ProductCard.vue';
+
+export default {
+  components: {
+    ProductCard
+  },
+  data() {
+    return {
+      products: []
+    }
+  },
+  mounted() {
+    this.fetchProducts();
+  },
+  methods: {
+    fetchProducts() {
+      fetch('http://127.0.0.1:8000/api/products')
+        .then(response => response.json())
+        .then(data => {
+          this.products = data.data;
+        })
+        .catch(error => {
+          console.error('Error fetching products:', error);
+        });
+    }
+  }
+}
+</script>
+
+<style scoped>
+.products {
+  width: 100%;
+  height: 140vh;
+  padding: 25px 0;
+}
+
+.products h1 {
+  margin: 35px 0;
+  font-size: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #c72092, #6c14d0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.products .box {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 25px 0;
+}
+</style>
+```
+
+Modify ProductCard.vue to be: 
+
+```vue
+<template>
+  <div class="card">
+    <div class="image">
+      <img :src="product.image">
+    </div>
+    <div class="products_text">
+      <h2>{{ product.name }}</h2>
+      <p>
+        {{ product.description }}
+      </p>
+      <h3>{{ product.price }}</h3>
+      <div class="products_star">
+        <i class="fa-solid fa-star" v-for="i in parseInt(product.stars_full)" :key="i"></i>
+        <i class="fa-solid fa-star-half-stroke" v-if="product.stars_half"></i>
+        <i class="fa-regular fa-star" v-for="i in parseInt(product.stars_empty)" :key="i"></i>
+      </div>
+      <a href="#" class="btn">Add To Cart</a>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    product: {
+      type: Object,
+      required: true,
+    },
+  },
+};
+</script>
+
+<style scoped>
+.card {
+  width: 290px;
+  height: 440px;
+  box-shadow: 0 0 8px #6c14d0;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px 20px;
+  background: #f6f6f6;
+}
+
+.card .image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card .image img {
+  width: 150px;
+  margin: 15px 0;
+  transition: 0.3s;
+}
+
+.card .products_text h2 {
+  font-size: 30px;
+  margin-top: 15px;
+}
+
+.card .products_text p {
+  color: #91919191;
+  line-height: 21px;
+  margin: 8px 0;
+}
+
+.card .products_text h3 {
+  margin: 7px 0;
+}
+
+.card .products_text .products_star {
+  color: orange;
+  margin-bottom: 19px;
+  cursor: pointer;
+}
+
+.card .products_text .btn {
+  text-decoration: none;
+  padding: 10px 20px;
+  background: linear-gradient(to right, #c72092, #6c14d0);
+  color: white;
+}
+</style>
+```
+
+Let's explain the lifecycle hooks and the Fetch API, and how we utilize them in this scenario:
+
+**Lifecycle Hooks, specifically the mounted hook**:
+Lifecycle hooks are methods provided by Vue.js that allow you to perform certain actions at different stages of a component's lifecycle. The mounted hook is one of the lifecycle hooks, and it is called after the component has been mounted onto the DOM. This hook is commonly used to perform initial setup, fetch data from APIs, or interact with external libraries.
+
+In the given code, the mounted hook is used to call the fetchProducts method. This ensures that when the component is mounted onto the DOM, the fetchProducts method is automatically invoked, fetching the products data from the API.
+
+**The Fetch API**:
+The Fetch API is a modern web API that provides a built-in mechanism for making HTTP requests in JavaScript. It offers a simple and powerful way to handle network requests and responses.
+
+In the fetchProducts method, we use the Fetch API to make a GET request to the specified URL (http://127.0.0.1:8000/api/products). The fetch function initiates the request and returns a Promise that represents the eventual response. We can then chain .then() methods to handle the response asynchronously.
+
+**Handling the Response**:
+Inside the .then() method, we call response.json() to parse the response body as JSON. This returns another Promise that resolves to the JSON data contained in the response. We then chain another .then() method to access the parsed JSON data.
+
+**Updating the Component State**:
+Finally, inside the second .then() method, we assign the fetched data to the products array using this.products = data.data. Assuming the API response includes an object with a data property containing the array of products, we extract that array and update the products data property of the Vue component. This will trigger a re-rendering of the component, displaying the fetched products on the page.
+
+**Error Handling**:
+In case of an error during the fetch request, the .catch() method is called. It logs the error to the console using console.error() to help with debugging and error tracking.
+
+By utilizing the mounted lifecycle hook and the Fetch API, we ensure that the fetchProducts method is called when the component is mounted, making a request to the specified API endpoint and updating the products data property with the fetched data. This allows the Vue component to display the products on the page after they have been fetched from the API.
+
+In our database, lets make it realy obvious that our data is coming from the API, modify one of the database entries like so
+<img width="945" alt="Screenshot 2023-07-16 at 13 41 56" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/763a0c7d-5b3b-450c-a781-c5d4189b89fb">
+
+if we look at this in the browser we should see:
+
+<img width="1425" alt="Screenshot 2023-07-16 at 13 42 55" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/f4446d08-5ff0-48b4-a3ab-6b710588727d">
+
+
+
