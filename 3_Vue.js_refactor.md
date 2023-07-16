@@ -1578,4 +1578,4 @@ If we check what the result is in our browser we should see:
 Well done! you made it through this section. I hope you now understand how breaking our website into small usable components helps us. I also hope you now understand some of the value vue.js brings us. There is alot more to learn in terms of vue.js but throughout this project I have shown you the very basics. We now have a beautiful vue.js application utalising components and data. In the next section we will move that data into a `database` and retrieve it using an `API` which we will build together using the `Laravel` framework
 
 # Ready for the next section? 
-[lets go!](https://github.com/michaelbarley/new-starter-demo-project/blob/main/3_Vue.js_refactor.md)
+[lets go!](https://github.com/michaelbarley/new-starter-demo-project/blob/main/4_laravel_API.md)
