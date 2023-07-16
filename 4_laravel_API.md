@@ -776,7 +776,8 @@ if we look at this in the browser we should see:
 
 Well done! you made it through this section. We now have our Vue.js application communicating with our very own API. The data is persistant and we can easily add and remove products!
 
-
+# Ready for the next section? 
+[lets go!](https://github.com/michaelbarley/new-starter-demo-project/blob/main/4_laravel_API.md)
 
 
 
