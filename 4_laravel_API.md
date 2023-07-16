@@ -366,3 +366,16 @@ The $hidden property is an array of attributes that should be hidden when the mo
 The $casts property defines how certain attributes should be cast to specific data types. In this example, the 'id' attribute is cast as an integer, 'price' as a decimal with two decimal places, and 'stars_full', 'stars_half', and 'stars_empty' as integers.
 
 These sections help configure the model's behavior when interacting with the database and defining the attributes that can be assigned, hidden, or casted.
+
+## Create Controller for Products:
+Controllers handle the logic and operations related to your API endpoints. Create a controller for handling products using the make:controller Artisan command. In the terminal type:
+
+```bash
+php artisan make:controller ProductController --api
+```
+
+This will create a "ProductController" file in the app/Http/Controllers directory. In the controller, you'll define methods to handle different API actions, such as fetching all products, creating a product, updating a product, etc. If we go to the file, you will again see placeholder content that laravel has provider. We can remove this and instead enter: 
+
+```php
+test
+```
