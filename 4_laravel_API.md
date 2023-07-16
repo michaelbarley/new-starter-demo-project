@@ -162,3 +162,94 @@ laravel new shoes-api
 ```
 
 This will create you a new laravel project with all the boilerplate code already written for us!
+
+Now pull `shoes-api` into our code editor and lets begin 🔥
+
+## Create Migration for Products
+In Laravel, migrations are used to create and modify database tables. You'll need to create a migration file to define the structure of your "products" table. You can use the make:migration Artisan command to generate the migration file.
+
+```bash
+php artisan make:migration create_products_table --create=products
+```
+
+This will create our migration file, If we go into that newly created file we should see some boiler plate code has been written by laravel for us. If we replace that boilerplate code with: 
+
+```php
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateProductsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('products', function (Blueprint $table) {
+            $table->id();
+            $table->string('image');
+            $table->string('name');
+            $table->text('description');
+            $table->decimal('price', 8, 2);
+            $table->integer('stars_full');
+            $table->integer('stars_half');
+            $table->integer('stars_empty');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('products');
+    }
+}
+
+```
+
+Let's break that down: 
+
+
+**use Illuminate\Database\Migrations\Migration**; and **use Illuminate\Database\Schema\Blueprint**; are namespace declarations that allow you to use Laravel's migration and schema classes within this file.
+
+**use Illuminate\Support\Facades\Schema**; imports the Schema facade, which provides convenient methods for manipulating database schemas.
+
+**class CreateProductsTable extends Migration** defines a new migration class named CreateProductsTable that extends the Migration base class.
+
+**public function up()** is the method responsible for running the migration. It creates the "products" table.
+
+**Schema::create('products', function (Blueprint $table) {** starts the table creation using the Schema facade's create method. It takes a table name ("products") and a closure function.
+
+**$table->id()**; creates an auto-incrementing primary key column named "id" for the "products" table.
+
+**$table->string('image');** adds a "image" column of type "string" to store the image URL or path for a product.
+
+**$table->string('name');** adds a "name" column of type "string" to store the name of a product.
+
+**$table->text('description');** adds a "description" column of type "text" to store the description of a product.
+
+**$table->decimal('price', 8, 2);** adds a "price" column of type "decimal" to store the price of a product with a maximum of 8 digits, 2 of which are decimals.
+
+**$table->integer('stars_full');**, **$table->integer('stars_half');**, and **$table->integer('stars_empty');** add columns to store the ratings of a product. Each of these columns is of type "integer".
+
+**$table->timestamps();** adds two timestamp columns, "created_at" and "updated_at", which are automatically managed by Laravel to track the creation and modification times of a product.
+**}** closes the closure function for creating the "products" table.
+
+**public function down()** is the method responsible for reversing the migration. It drops the "products" table if it exists.
+
+**Schema::dropIfExists('products');** drops the "products" table using the `dropIfExists` method of the Schema facade.
+
+By running the migration, Laravel will create the "products" table with the specified columns in your database.
+
+
+
+
