@@ -377,5 +377,89 @@ php artisan make:controller ProductController --api
 This will create a "ProductController" file in the app/Http/Controllers directory. In the controller, you'll define methods to handle different API actions, such as fetching all products, creating a product, updating a product, etc. If we go to the file, you will again see placeholder content that laravel has provider. We can remove this and instead enter: 
 
 ```php
-test
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\Product;
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+
+class ProductController extends Controller
+{
+    /**
+     * Display a listing of the products.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function index(Request $request)
+    {
+        $products = Product::all();
+
+        return response()->json([
+            'data' => $products,
+        ]);
+    }
+
+    /**
+     * Display the specified product.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\Product  $product
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Request $request, Product $product)
+    {
+        return response()->json([
+            'data' => $product,
+        ]);
+    }
+
+    /**
+     * Store a newly created product in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        $validatedData = $request->validate([
+            'image' => 'required|string',
+            'name' => 'required|string',
+            'description' => 'required|string',
+            'price' => 'required|numeric',
+            'stars_full' => 'required|integer',
+            'stars_half' => 'required|integer',
+            'stars_empty' => 'required|integer',
+        ]);
+
+        $product = Product::create($validatedData);
+
+        return response()->json([
+            'data' => $product,
+        ], Response::HTTP_CREATED);
+    }
+}
 ```
+
+Now let's break down the different sections of the "ProductController":
+
+**Namespace and Use Statements**:
+The controller file resides in the App\Http\Controllers namespace. The use statements import the necessary classes, including the Product model and other dependencies.
+
+**Class Definition**:
+The ProductController class extends the base Controller class provided by Laravel.
+
+**Index Method**:
+The index method handles the request to fetch all products. It retrieves all products using the Product::all() method and returns a JSON response with the products' data.
+
+**Show Method**:
+The show method handles the request to fetch a specific product. It accepts a Product model instance through route model binding, where the product ID is automatically resolved from the request URL. It returns a JSON response with the specific product's data.
+
+**Store Method**:
+The store method handles the request to create a new product. It starts by validating the incoming request data using the validate method, which ensures that the required fields (image, name, description, price, stars_full, stars_half, and stars_empty) are present and have the specified validation rules. If the validation passes, a new Product instance is created using the create method, which assigns the validated data to the corresponding attributes. Finally, a JSON response is returned with the created product's data, along with the HTTP_CREATED status code.
+
+These are just a few example methods, but you can add additional methods to the controller as needed, such as methods for updating, deleting, or performing other actions on products.
+
+In your controller, you'll define the necessary methods to handle different API actions based on your requirements. Each method receives an instance of the Request object, allowing you to access the incoming request data, query parameters, and more. You'll also utilize the Response object to generate appropriate JSON responses with the desired HTTP status codes.
