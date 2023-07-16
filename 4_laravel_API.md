@@ -533,3 +533,14 @@ After retrieving the data from the model, the controller prepares a response. In
 Finally, the controller sends the response back to the user who made the initial request. The user receives the JSON response containing the product data.
 
 This process ensures that when a user visits /api/products, the request is correctly routed to the ProductController and its index method. The controller then interacts with the model to fetch the necessary data and generates a response that is sent back to the user.
+
+Let's now see the result in the browser! In the terminal type: 
+
+```bash
+php artisan serve
+```
+This will start a local server where our api can be accessed from. You should see something like `   INFO  Server running on [http://127.0.0.1:8000].  ` 
+
+going to that url you will see the applicaiton, if you add `/api/proucts` you should see: 
+
+<img width="1015" alt="Screenshot 2023-07-16 at 13 19 09" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/1cf34983-0cf1-4090-8460-768187e3ac8b">
