@@ -128,7 +128,7 @@ This will install the latest version of PHP available through Homebrew.
 **Composer**:
 Composer is a dependency management tool for PHP that is used to manage Laravel and its dependencies. You can install Composer by running the following command in Terminal:
 
-``bash
+```bash
 brew install composer
 ```
 
