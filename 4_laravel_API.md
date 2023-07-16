@@ -280,3 +280,89 @@ If we now refresh our database we should see laravel has added our `Products` ta
 Lets manually enter our products into the database
 <img width="1196" alt="Screenshot 2023-07-16 at 12 53 15" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/174b5bbe-ea07-49b7-a04a-3f6bfe695f0c">
 
+## Create Model for Products
+In Laravel, models represent database tables and handle interactions with the database. Create a model for your "products" table using the make:model Artisan command. In the console type:
+
+```bash
+php artisan make:model Product
+```
+
+This will create a "Product" model file in the `app/Models` directory. Again there will be some boilder plate here but we can replace it with this: 
+
+```php
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Product extends Model
+{
+    use HasFactory;
+
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'products';
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'image',
+        'name',
+        'description',
+        'price',
+        'stars_full',
+        'stars_half',
+        'stars_empty',
+    ];
+
+    /**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
+    protected $hidden = [];
+
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'id' => 'integer',
+        'price' => 'decimal:2',
+        'stars_full' => 'integer',
+        'stars_half' => 'integer',
+        'stars_empty' => 'integer',
+    ];
+}
+```
+
+Let's break down the different sections of the "Product" model:
+
+**Namespace and Use Statements**:
+The model file resides in the App\Models namespace, so the namespace declaration reflects that. The use statements import the necessary classes for the model.
+
+**Class Definition**:
+The Product class extends the base Model class provided by Laravel. It also uses the HasFactory trait, which enables model factories to create fake instances for testing purposes.
+
+**Table Name**:
+The $table property specifies the name of the database table associated with the model. In this case, it is set to 'products', which matches the name of your "products" table.
+
+**Mass Assignable Attributes**:
+The $fillable property defines an array of attributes that can be mass-assigned when creating or updating a product. In this example, it includes attributes such as 'image', 'name', 'description', 'price', 'stars_full', 'stars_half', and 'stars_empty'.
+
+**Hidden Attributes**:
+The $hidden property is an array of attributes that should be hidden when the model is converted to an array or JSON response. By default, it is empty, but you can specify any attributes you want to hide from public view.
+
+**Attribute Casting**:
+The $casts property defines how certain attributes should be cast to specific data types. In this example, the 'id' attribute is cast as an integer, 'price' as a decimal with two decimal places, and 'stars_full', 'stars_half', and 'stars_empty' as integers.
+
+These sections help configure the model's behavior when interacting with the database and defining the attributes that can be assigned, hidden, or casted.
