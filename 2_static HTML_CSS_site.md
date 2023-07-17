@@ -8,7 +8,7 @@ By the end of this section you will have a fully functional ecommerce landing pa
 4. Name this folder `Shoes`
 5. Click into `Shoes` folder and create a new folder named `image`
 6. go to https://drive.google.com/drive/folders/1VCFjiogucrQHMW24E_EqDw3L18cfJNLz?usp=share_link. Shift click all the images, then right click and download
-7. once the images have donwloaded they should appear if you Navigate to `Downloads` in finder.
+7. once the images have downloaded they should appear if you Navigate to `Downloads` in finder.
 8. Drag and drop all those downloaded images into your `Documents/Shoes/image` directory
 
 ## 2. index.html
