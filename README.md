@@ -10,7 +10,7 @@ I have purposely designed this demo project to take you through the **basics** a
 A break down of the course is: 
 - **Project Brief**  - Here we will describe what we are going to be building together, I will show you the completed project Blue Peter style.
 
-- **Static HTML/CSS site** - We will cover the badics of HTML and CSS, we will understand how they work together
+- **Static HTML/CSS site** - We will cover the basics of HTML and CSS, we will understand how they work together
   
 - **Vue.js refactor** - We will convert our static site into a Vue.js app. We will discuss the advantages to this as well as cover the basics of Vue.js
   
