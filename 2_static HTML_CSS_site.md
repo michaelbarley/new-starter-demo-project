@@ -253,6 +253,33 @@ selectors in CSS are used to target HTML elements and apply styles to them. Ther
 
 Using these selectors and combinators, you can target pretty much any element on a page in many different ways. Understanding how to use them effectively is a key part of mastering CSS.
 
+### CSS Specificity 
+CSS specificity is an important concept in Cascading Style Sheets (CSS) that determines which styles are applied to an element when there are conflicting styles. The principle of specificity helps resolve such conflicts by establishing a system of precedence, based on a set of rules.
+
+Here's how CSS specificity works, broken down into details:
+
+**Type of Selector**: In CSS, there are several ways to select elements: element type (e.g., p, div), class (.example), id (#example), and attribute ([type="text"]), among others. Each type of selector carries a different level of specificity:
+- Type and pseudo-elements (e.g., ::before, ::after): These have the lowest specificity. If you have a p tag with a style, and a class on that same tag with a different style, the class's style will be applied.
+- Class, attribute, and pseudo-class selectors (e.g., :hover, :focus): These have a higher specificity than type selectors.
+- ID selectors (#example): ID selectors have higher specificity than class, attribute, and type selectors.
+- Inline styles (style="..." directly in the HTML element): These have even higher specificity.
+- The !important annotation: This is a special case. It overrides all other declarations, but should be used sparingly as it breaks the natural cascade of stylesheets and can make debugging more complex.
+  
+**Specificity Hierarchy**: Specificity is calculated using a kind of "point system". For simplicity, you might think of it like this (though actual internal calculations are more complex):
+- Inline styles: 1000 points.
+- Each ID: 100 points.
+- Each class, attribute, or pseudo-class: 10 points.
+- Each element or pseudo-element: 1 point.
+When two selectors apply to the same element, the one with the highest "score" is used. In case of a tie, the style declared last in the CSS will be applied.
+
+**Combining Selectors**: When you combine selectors, the total specificity is the sum of the individual selector specificities. For example, div#example .highlight a:hover would have a total specificity of 122 (100 for the ID, 10 for the class, 10 for the pseudo-class, and 1 each for the div and a selectors).
+
+**Universal, combinators and negation pseudo-class**: The universal selector (*), combinators (+, >, ~, " "), and the negation pseudo-class (:not()) have no effect on specificity. The specificity is calculated based on the selectors within the negation pseudo-class.
+
+**Specificity and Inheritance**: Inheritance is when styles flow from a parent element to a child element. Specificity only applies if the same element is targeted by the parent and child. Styles will always preferentially flow from parent to child unless the child has a specific style defined.
+
+Remember that it's a good practice to try and keep your specificity levels as low as possible to maintain your CSS's scalability and efficiency. Overly-specific CSS can become difficult to maintain and override, leading to the temptation to use !important, which can create even more maintenance issues in the future. Try to structure your CSS in such a way that you can keep your selectors short, clear, and reusable.
+
 ### The CSS Box Model
 In CSS, the term "box model" is used when talking about design and layout.
 
