@@ -170,7 +170,7 @@ Lets update our `App.vue` to include all of our newly created components:
 <script>
 import Header from './components/Header.vue';
 import NewArrival from './components/NewArrival.vue';
-import Review from './components/About.vue';
+import About from './components/About.vue';
 import Review from './components/Review.vue';
 import Services from './components/Services.vue';
 import LoginForm from './components/LoginForm.vue';
