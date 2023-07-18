@@ -280,6 +280,9 @@ When two selectors apply to the same element, the one with the highest "score" i
 
 Remember that it's a good practice to try and keep your specificity levels as low as possible to maintain your CSS's scalability and efficiency. Overly-specific CSS can become difficult to maintain and override, leading to the temptation to use !important, which can create even more maintenance issues in the future. Try to structure your CSS in such a way that you can keep your selectors short, clear, and reusable.
 
+<img width="623" alt="Screenshot 2023-07-18 at 13 13 15" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/6f1a2efa-a8ce-4838-8d11-006d274eaaca">
+
+
 ### The CSS Box Model
 In CSS, the term "box model" is used when talking about design and layout.
 
