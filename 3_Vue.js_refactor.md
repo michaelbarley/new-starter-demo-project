@@ -446,7 +446,7 @@ If we run `yarn serve` in the terminal and go to the url it generates you should
 <img width="1684" alt="Screenshot 2023-07-15 at 20 13 52" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/9088bc4b-affe-49e6-8d3d-730227917724">
 
 ## NewArival.vue
-In your Header.vue, enter:
+In your NewArrival.vue, enter:
 ```vue
 <template>
     <div class="products" id="Products">
