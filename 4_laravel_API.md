@@ -121,6 +121,9 @@ Sequal Ace is an easy-to-use DBMS that's designed to work with SQL-based databas
 
 Remember, a DBMS like Sequal Ace will not only help you manage your data but also simplify database maintenance tasks. By choosing a robust DBMS, you're investing in an efficient, secure, and organized data management process that will significantly enhance your application's performance and scalability.
 
+<img width="1161" alt="Screenshot 2023-07-18 at 12 59 19" src="https://github.com/michaelbarley/new-starter-demo-project/assets/50404794/38521d80-8de9-4880-926a-c69082903467">
+
+
 ## APIs
 APIs (Application Programming Interfaces) are sets of rules, protocols, and tools that allow different software applications to communicate and interact with each other. APIs define how different software components can request and exchange data or perform specific actions. In the case of the Laravel API you're going to build, here's why it can be beneficial for your Vue.js application:
 
