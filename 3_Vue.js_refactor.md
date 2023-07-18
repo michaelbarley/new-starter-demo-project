@@ -231,6 +231,53 @@ In the example, the CSS rules are applied to the `#app` id, affecting the text f
 
 The `App.vue` file is a central piece of your application. It imports and integrates the other components to form the complete web application. Understanding its structure and purpose is key to mastering Vue.js development
 
+## package.json
+The package.json file is a key element in any Node.js project or JavaScript application that uses npm (Node Package Manager) for dependency management, and this includes applications built with Vue.js. The file is automatically created when you initialize a new project with npm by running the npm init command.
+
+Here's a more in-depth look at what the package.json file is and what it does:
+
+**Project Metadata**: It holds metadata relevant to the project, such as the project's name, version, and description. This information helps identify the project and provides a brief overview of its purpose.
+
+**List of Dependencies**: It contains a list of all the dependencies (and their precise versions) your project needs to run correctly. When you install a new package using npm (e.g., npm install vue-router), an entry is added to the dependencies section. These dependencies are necessary for the application to run.
+
+**List of DevDependencies**: Similar to the list of dependencies, but these packages are only needed for development and testing. They are not included when the application is built for production.
+
+**Scripts**: It can define script commands that you can run using npm. This could be to start your server, to compile your application, to run tests, and more. For example, a common script in a Vue.js application might be "serve": "vue-cli-service serve" to start the development server, or "build": "vue-cli-service build" to compile the application for production.
+
+**Configuration**: Some tools used in the project have their configuration details mentioned in package.json, like Babel, ESLint, etc.
+
+**License Information**: It usually contains the license under which your project is released, helping others understand how they can use and share your code.
+Author Information: It can include the details about the author or authors of the project.
+
+**Repository Information**: It can contain information about the project's repository, like its type and URL. This is especially useful when the project is open-source and maintained in a version control system like Git.
+
+It's important to note that package.json is a crucial part of your project. It should be included in your version control system, and it's generally one of the first files that someone will look at to understand the basics of your project.
+
+In Vue.js applications, whether it's a simple Vue.js project or a larger project using the Vue CLI, package.json plays an essential role in defining and managing the necessary dependencies and scripts that make your application work.
+
+NOTE: in order to get rid of vue.js errors telling us our component names need to be at least two words long we must add this to our `package.json`
+
+```javascript
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "@babel/eslint-parser"
+    },
+    "rules": {
+      "vue/multi-word-component-names": "off"
+    }
+  },
+```
+
+not the `"vue/multi-word-component-names": "off"`
+
 ## Header.vue
 In your Header.vue, enter:
 
