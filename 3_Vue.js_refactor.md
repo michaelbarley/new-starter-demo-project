@@ -276,7 +276,7 @@ NOTE: in order to get rid of vue.js errors telling us our component names need t
   },
 ```
 
-not the `"vue/multi-word-component-names": "off"`
+note the `"vue/multi-word-component-names": "off"`
 
 ## Header.vue
 In your Header.vue, enter:
